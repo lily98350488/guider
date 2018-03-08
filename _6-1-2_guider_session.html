@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link href="https://file.myfontastic.com/RKp9uZow9CbK4GQhmp49FN/icons.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style type="text/css">
+    @import url(css/all.css);
+    </style>
+</head>
+
+<body>
+    <div id="Subheader">
+        <div class="container">
+        </div>
+    </div>
+    <div id="Content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-3 mb-3">
+                    <div class="member-photo mb-3">
+                        <img src="https://api.fnkr.net/testimg/500x500/00CED1/FFF/?text=PHOTO">
+                        <a href="#" class="" data-toggle="modal" data-target="#changeProfileImg">Change</a>
+                    </div>
+                    <h3>Hello,</br>Jenny Chen</h3>
+                    <div class="list-group mt-3">
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">個人資訊
+          </a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center active">設定預約時段</a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">預約記錄
+          <span class="badge badge-primary badge-pill">3</span>
+          </a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">行程表
+          <span class="badge badge-primary badge-pill">1</span>
+          </a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">評論</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8 col-lg-9 md-mb-3">
+                    <div style="padding-bottom:4%;"></div>
+                    <div class="row set-tab">
+                        <div class="col-6 tab-first">
+                            <div class="open">GUIDER</div>
+                        </div>
+                        <div class="col-6 tab-last">
+                            <a href="#">TOURIST</a>
+                        </div>
+                    </div>
+                    <div class="row set-content">
+                        <div class="col">
+                            <form action="" class="set-edit">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5>時程表</h5>
+                                        <hr>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <a href="#" data-toggle="modal" data-target="#addTime">放日曆</a>
+                                    </div>
+                                    <div class="col-12">
+                                        <p>可選擇今天以後的日期(例如:今天9/4，可填寫的時間為9/5之後)，填寫開放導覽的時段，一定要滿4小時，時程表這個項目才會打勾，若時間經過後未達總時數4小時，打勾的狀態會自動取消。
+                                            </br>
+                                            <span class="text-danger">目前未達4小時！</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addLoopTime">新增循環時段</button>
+                                        <a href="#" class="btn btn-primary btn-block">查看時程表</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="changeProfileImg" tabindex="-1" role="dialog" aria-labelledby="changeProfileImg" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title">Change profile photo</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group ">
+                            <div class="custom-file upload-img profile-photo">
+                                <div class="rounded br-50 mb-3">
+                                </div>
+                                <input type="file" accept="image/*" class="custom-file-input" id="profilePhoto" required>
+                                <p>repudiandae aliquam aspernatur minus cumque quod provident dolores optio. Cupiditate velit consequuntur laborum obcaecati tenetur, eveniet earum adipisci iste.</p>
+                            </div>
+                            <div class="form-group mt-3">
+                                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addLoopTime" tabindex="-1" role="dialog" aria-labelledby="addLoopTime" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title">新增循環時段</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">所有時間均按Guider當地時區顯示</p>
+                    <div class="table-responsive scroll-bar-style mb-5">
+                        <table class="table table-sm table-record">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="long-th">日期/狀態</th>
+                                    <th scope="col" class="long-th">時間</th>
+                                    <th scope="col" class="text-center">時數</th>
+                                    <th scope="col" class="text-center">移除</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>每週二重複</td>
+                                    <td>8:00-11:59</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center"><span class="remove-icon"><i class="fas fa-trash-alt"></i></span></td>
+                                </tr>
+                                <tr>
+                                    <td>每週二重複</td>
+                                    <td>17:00-20:59</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center"><span class="remove-icon"><i class="fas fa-trash-alt"></i></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <form>
+                        <div class="row mb-5">
+                            <div class="col-12 col-md-6 form-group md-2-pr">
+                                <label>開始時間</label>
+                                <select class="form-control" required>
+                                    <option value="" disabled selected hidden>請選擇開始時間</option>
+                                    <option value="00:00">00:00</option>
+                                    <option value="00:30">00:30</option>
+                                    <option value="01:00">01:00</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 form-group md-2-pr">
+                                <label>結束時間</label>
+                                <select class="form-control" required>
+                                    <option value="" disabled selected hidden>請選擇結束時間</option>
+                                    <option value="00:00">00:00</option>
+                                    <option value="00:30">00:30</option>
+                                    <option value="01:00">01:00</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 form-group md-2-pr">
+                                <select class="form-control" required>
+                                    <option value="" disabled selected hidden>請選擇循環規則</option>
+                                    <option value="Sun">每週日重複</option>
+                                    <option value="Mon">每週一重複</option>
+                                    <option value="Tue">每週二重複</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 form-group md-2-pr">
+                                <select class="form-control" required>
+                                    <option value="" disabled selected hidden>請選擇持續時間</option>
+                                    <option value="week">持續一週</option>
+                                    <option value="month">持續一月</option>
+                                    <option value="year">持續一年</option>
+                                </select>
+                                <button type="submit" class="btn btn-primary btn-block mt-3">新增循環時段</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addTime" tabindex="-1" role="dialog" aria-labelledby="addTime" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title">新增時段</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">所有時間均按Guider當地時區顯示</br>2017年</br>9月5日</p>
+                    <div class="table-responsive scroll-bar-style mb-5">
+                        <table class="table table-sm table-record">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="long-th">日期/狀態</th>
+                                    <th scope="col" class="long-th">時間</th>
+                                    <th scope="col" class="text-center">時數</th>
+                                    <th scope="col" class="text-center">移除</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2017年9月5日</td>
+                                    <td>07:00-12:59</td>
+                                    <td class="text-center">6</td>
+                                    <td class="text-center"><span class="remove-icon"><i class="fas fa-trash-alt"></i></span></td>
+                                </tr>
+                                <tr>
+                                    <td>每週二重複</td>
+                                    <td>17:00-20:59</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center"><span class="remove-icon"><i class="fas fa-trash-alt"></i></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <form>
+                        <div class="row mb-5">
+                            <div class="col-12 col-md-6 form-group md-2-pr">
+                                <label>開始時間</label>
+                                <select class="form-control" required>
+                                    <option value="" disabled selected hidden>請選擇開始時間</option>
+                                    <option value="00:00">00:00</option>
+                                    <option value="00:30">00:30</option>
+                                    <option value="01:00">01:00</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 form-group md-2-pr">
+                                <label>結束時間</label>
+                                <select class="form-control" required>
+                                    <option value="" disabled selected hidden>請選擇結束時間</option>
+                                    <option value="00:00">00:00</option>
+                                    <option value="00:30">00:30</option>
+                                    <option value="01:00">01:00</option>
+                                </select>
+                                <button type="submit" class="btn btn-primary btn-block mt-3">新增時段</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(function() {
+        // 個人相片更換
+        var $this = $(".profile-photo input").siblings("div");
+        var url = $(".member-photo img").attr("src");
+        $this.css("background-image", "url(" + url + ")");
+
+        $(".upload-img input").on("change", function(event) {
+            var $this = $(this).siblings("div");
+            var files = event.target.files;
+            var image = files[0];
+            // here's the file size
+            var reader = new FileReader();
+            reader.onload = function(file) {
+                var img = new Image();
+                img.src = file.target.result;
+                $this.css("background-image", "url(" + img.src + ")");
+            };
+            reader.readAsDataURL(image);
+        });
+        // 移除時段
+        $(".table-sm .remove-icon").click(function() {
+            $(this).closest("tr").remove();
+        });
+    });
+    </script>
+</body>
+
+</html>

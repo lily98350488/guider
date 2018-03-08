@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style type="text/css">
+    @import url(css/all.css);
+    </style>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <header id="Header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- logo -->
+            <a class="navbar-brand" href="#"><img src="https://api.fnkr.net/testimg/150x50/6795ea/fff/?text=Guider"></a>
+            <!-- 三明治選單 -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto"></ul>
+                <!-- menu -->
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fas fa-search"></i> Search guider <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Become a Guider</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" data-toggle="modal" data-target="#registerForm" href="#">Sign up</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" data-toggle="modal" data-target="#loginForm" href="#">Log in</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Contact us</a>
+                            <a class="dropdown-item" href="#">Booking process</a>
+                            <a class="dropdown-item" href="#">Refund Policy</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Message</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">繁體中文</a>
+                            <a class="dropdown-item" href="#">ไทย</a>
+                            <a class="dropdown-item" href="#">日本語</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="https://api.fnkr.net/testimg/45x45/6795ea/fff/?text=Member">My account
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Setting</a>
+                            <a class="dropdown-item" href="#">Trip</a>
+                            <a class="dropdown-item" href="#">Wish list</a>
+                            <a class="dropdown-item" href="#">Give us advice</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <a data-toggle="modal" data-target="#registrationFailed" href="#">Registration failed</a></br>
+    <!-- 註冊視窗 -->
+    <div class="modal fade" id="registerForm" tabindex="-1" role="dialog" aria-labelledby="registerForm" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <a class="btn btn-primary btn-lg btn-block" href="#" role="button">Sign up with Facebook</a>
+                    <a class="btn btn-primary btn-lg btn-block" href="#" role="button">Sign up with Google</a>
+                    <hr>
+                    <p class="text-center">Sign up with Email</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control is-invalid" placeholder="Email address" required>
+                            <div class="invalid-feedback">Email is required.</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="First name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Last name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Create a password" required>
+                        </div>
+                        <p>Birthday To sign up, you must be 21 or older. </p>
+                        <div class="form-row">
+                            <div class="form-group col-4">
+                                <select class="form-control" required>
+                                    <option value="" disabled selected hidden>Month</option>
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-4">
+                                <select class="form-control" required>
+                                    <option value="" disabled selected hidden>Day</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-4">
+                                <select class="form-control" required>
+                                    <option value="" disabled selected hidden>Year</option>
+                                    <option value="1980">1980</option>
+                                    <option value="1981">1981</option>
+                                    <option value="1982">1982</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+                </div>
+                <div class="modal-footer">
+                    <p>Already have an account? <a data-dismiss="modal" data-toggle="modal" data-target="#loginForm" href="#">Log in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 登入視窗 -->
+    <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginForm" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <a class="btn btn-primary btn-lg btn-block" href="#" role="button">Log in with Facebook</a>
+                    <a class="btn btn-primary btn-lg btn-block" href="#" role="button">Log in with Google</a>
+                    <hr>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control is-invalid" placeholder="Email address" required>
+                            <div class="invalid-feedback">Email is required.</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <div class="form-group form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                        </div>
+                    </form>
+                    <p class="text-center"><a data-dismiss="modal" data-toggle="modal" data-target="#forgetPassword" href="#">Forgot password?</a></p>
+                </div>
+                <div class="modal-footer">
+                    <p>Don’t have an account? <a data-dismiss="modal" data-toggle="modal" data-target="#registerForm" href="#">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 註冊失敗/未滿21 -->
+    <div class="modal fade" id="registrationFailed" tabindex="-1" role="dialog" aria-labelledby="registrationFailed" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title">Sorry</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-title">You are under 21, so you can not register as a member.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 忘記密碼 -->
+    <div class="modal fade" id="forgetPassword" tabindex="-1" role="dialog" aria-labelledby="forgetPassword" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title">Reset password</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Enter the email address associated with your account, and we’ll email you a link to reset your password.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email address" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">Send</button>
+                        </div>
+                    </form>
+                    <p class="text-center"><a data-dismiss="modal" data-toggle="modal" data-target="#loginForm" href="#">Back to login.</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+    $(function() {
+
+        var scrollBarTop = 0;
+        var headerTop = $('#Header').offset().top;
+
+        $(window).scroll(function() {
+            // 定義scrollbartop
+            scrollBarTop = $(this).scrollTop();
+
+            if (scrollBarTop > headerTop) {
+                $('#Header').addClass('fixed-top');
+            } else {
+                $('#Header').removeClass('fixed-top');
+            }
+        })
+
+    })
+    </script>
+</body>
+
+</html>
