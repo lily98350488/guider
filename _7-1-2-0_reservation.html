@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link href="https://file.myfontastic.com/RKp9uZow9CbK4GQhmp49FN/icons.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style type="text/css">
+    @import url(css/all.css);
+    </style>
+</head>
+
+<body>
+    <div id="Subheader">
+        <div class="container">
+            <h1 class="text-white title">Reservation</h1>
+        </div>
+    </div>
+    <div id="Content">
+        <div class="container">
+            <div class="row mb-4 border-bottom">
+                <div class="col text-center mt-4 mt-sm-0 p-sm-0 ">
+                    <h3>開始預約</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="pb-2"></div>
+                    <div class="progress mb-4 step" style="height: 20px;">
+                        <div class="progress-bar" role="progressbar" style="width: 33.33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">STEP 1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex  align-items-center flex-md-row flex-column person-info mb-4">
+                <div class="info-img"><img class="align-self-center mr-3 detail-img img-round" src="https://api.fnkr.net/testimg/500x500/00CED1/FFF/?text=PHOTO"></div>
+                <div class="info-text">
+                    <h5 class="mt-0 mb-1">Guider</h5>
+                    <h5 class="mb-0"><strong>JING LIN</strong></h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="row mb-4">
+                        <div class="col set-edit bg-white shadow">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="mb-3"><strong>預約資訊</strong></h4>
+                                    <h5>Guider每小時收費</h5>
+                                    <hr>
+                                    <p>$500 TWD / hr</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <h5>選擇時程*</h5>
+                                    <hr>
+                                    <p class="text-danger">一次預約時數至少達4小時</br>必須至少提前10小時預約</p>
+                                    <div class="table-responsive scroll-bar-style">
+                                        <table class="table table-sm table-record">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="long-th">日期</th>
+                                                    <th scope="col" class="long-th">時間</th>
+                                                    <th scope="col" class="text-center">時數</th>
+                                                    <th scope="col" class="text-center">移除</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>2017年8月19日</td>
+                                                    <td>07:00-12:59</td>
+                                                    <td class="text-center">6</td>
+                                                    <td class="text-center"><span class="remove-icon"><i class="fas fa-trash-alt"></i></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2017年8月20日</td>
+                                                    <td>17:00-18:59</td>
+                                                    <td class="text-center">2</td>
+                                                    <td class="text-center"><span class="remove-icon"><i class="fas fa-trash-alt"></i></span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addReTime">添加/選擇時程</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5>人數*</h5>
+                                    <hr>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3 person-counter">
+                                    <p class="text-center">成人</p>
+                                    <div class="num" data-max="9" data-min="1">
+                                        <span class="minus num-limit" data-attr="minus"><i class="fas fa-minus"></i></span>
+                                        <input type="text" value="1" class="qty" readonly>
+                                        <span class="add" data-attr="add"><i class="fas fa-plus"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3 person-counter">
+                                    <p class="text-center">孩童</p>
+                                    <div class="num" data-max="4" data-min="0">
+                                        <span class="minus num-limit" data-attr="minus"><i class="fas fa-minus"></i></span>
+                                        <input type="text" value="0" class="qty" readonly>
+                                        <span class="add" data-attr="add"><i class="fas fa-plus"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3 person-counter">
+                                    <p class="text-center">嬰兒</p>
+                                    <div class="num" data-max="4" data-min="0">
+                                        <span class="minus num-limit" data-attr="minus"><i class="fas fa-minus"></i></span>
+                                        <input type="text" value="0" class="qty" readonly>
+                                        <span class="add" data-attr="add"><i class="fas fa-plus"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h5>自我簡介*</h5>
+                                    <hr>
+                                    <div class="form-group">
+                                        <textarea class="form-control" rows="5" placeholder="輸入簡單的自我簡介"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5>身分認證*</h5>
+                                    <hr>
+                                    <p>請放心，為了您的旅程安全...</p>
+                                    <div class="form-group">
+                                        <div class="custom-file upload-img">
+                                            <div class="rounded mb-3">
+                                                <p class="text-center">+
+                                                    <br>護照照片</p>
+                                            </div>
+                                            <label class="btn btn-primary btn-block" for="passPortImage">上傳護照</label>
+                                            <input type="file" accept="image/*" class="custom-file-input" id="passPortImage" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5>有優惠券嗎？</h5>
+                                    <hr>
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="輸入優惠券代碼" id="coupon">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <button type="" class="btn btn-primary btn-block">使用優惠券</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col set-edit bg-white shadow">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h4 class="mb-3"><strong>結帳資訊</strong></h4>
+                                    <h5>價格確認</h5>
+                                    <hr>
+                                    <h5><strong>$500 TWD ✕ 8小時 ✕ 1.09 </strong></h5>
+                                    <p class="text-primary mb-0">全館周年慶(優惠折扣$100.00TWD)</p>
+                                    <p class="text-primary">優惠券Guider599(優惠折扣$100.00TWD)</p>
+                                    <hr>
+                                </div>
+                                <div class="col-12 text-right">
+                                    <h5><strong>總價 $4,160 TWD</strong></h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb-5">
+                                    <h5>選擇付款方式*</h5>
+                                    <hr>
+                                    <p>付款方式說明</br>
+                                        provident voluptas accusamus perferendis nisi doloribus illum quibusdam quasi eligendi optio corporis eum nostrum ducimus! Ut sequi non sunt officiis quis ad asperiores dolores, quos ex harum voluptatem vero error rem animi rerum totam omnis dolor eligendi facilis tempora accusantium ipsa dignissimos fugiat.
+                                    </p>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="payMethod1" name="payMethod" class="custom-control-input">
+                                        <label class="custom-control-label" for="payMethod1">付款方式1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="payMethod2" name="payMethod" class="custom-control-input">
+                                        <label class="custom-control-label" for="payMethod2">付款方式2</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <button type="submit" class="btn btn-secondary btn-block">下一步</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 full-side-bar lg-mt-3 lg-mb-5">
+                    <div class="card mb-3">
+                        <h5 class="card-header text-white bg-primary">說明和提醒</h5>
+                        <div class="card-body">
+                            <p>一些文字說明</p>
+                            <a href="#" class="btn btn-primary btn-block">預約流程</a>
+                            <a href="#" class="btn btn-primary btn-block">退貨政策</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addReTime" tabindex="-1" role="dialog" aria-labelledby="addReTime" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title">查看時程表</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">所有時間均按Guider當地時區顯示</p>
+                    <div class="">放時程表</div>
+                    <div class="row">
+                        <div class="col text-center mt-3 mb-3">
+                            <button type="button" class="btn btn-primary">添加/選擇時程</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+    $(function() {
+        // 移除時段
+        $(".table-sm .remove-icon").click(function() {
+            $(this).closest("tr").remove();
+        });
+        // 人數
+        function addMinusQty() {
+            $(".num span").on("click", function() {
+                var $this = $(this),
+                    //data-attr of '.num span' (see html)
+                    attr = $this.attr("data-attr"),
+                    $input = $this.closest(".num").find(".qty"),
+                    $add = $this.closest(".num").find(".add"),
+                    $minus = $this.closest(".num").find(".minus"),
+                    //data-max of '.num' (see html)
+                    maxQty = $this.closest(".num").data("max"),
+                    minQty = $this.closest(".num").data("min");
+
+                if (attr == "add" && $input.val() < maxQty) {
+                    var value = parseInt($input.val()) + 1;
+                    $input.val(value);
+                    $minus.removeClass("num-limit");
+
+                    if (value == maxQty) {
+                        $add.addClass("num-limit");
+                    }
+                } else if (attr == "minus" && $input.val() > minQty) {
+                    var value = parseInt($input.val()) - 1;
+                    $input.val(value);
+                    $add.removeClass("num-limit");
+
+                    if (value == minQty) {
+                        $minus.addClass("num-limit");
+                    }
+                }
+            });
+        }
+        addMinusQty();
+        //       相片上傳
+        $('.upload-img input').on('change', function(event) {
+            var $this = $(this).siblings("div");
+            var files = event.target.files;
+            var image = files[0];
+            // here's the file size
+            var reader = new FileReader();
+            reader.onload = function(file) {
+                var img = new Image();
+                img.src = file.target.result;
+                $this.html(img);
+            }
+            reader.readAsDataURL(image);
+        });
+    });
+    </script>
+</body>
+
+</html>

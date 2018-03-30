@@ -29,8 +29,8 @@
                     <div class="list-group mt-3">
                         <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center active">個人資訊</a>
                         <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">設定預約時段</a>
-                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">預約記錄<span class="badge badge-primary badge-pill">3</span></a>
-                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">行程表<span class="badge badge-primary badge-pill">1</span></a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">預約記錄<span class="badge badge-secondary badge-pill">3</span></a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">行程表<span class="badge badge-secondary badge-pill">1</span></a>
                         <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">評論</a>
                     </div>
                 </div>
@@ -452,7 +452,7 @@
                                                 1. 汽車基本資訊
                                             </div>
                                             <div class="col-12 col-md-6">
-                                                2人座</br>
+                                                4人座</br>
                                                 實際可容納人數：3人</br>
                                                 車齡：10年
                                             </div>
@@ -858,8 +858,8 @@
                     var value = parseInt($input.val()) - 1;
                     $input.val(value);
                     $add.removeClass("num-limit");
-
-                    if (value == 1) {
+                    
+                    if (value == minQty) {
                         $minus.addClass("num-limit");
                     }
                 }

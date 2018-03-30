@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link href="https://file.myfontastic.com/RKp9uZow9CbK4GQhmp49FN/icons.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style type="text/css">
+    @import url(css/all.css);
+    </style>
+</head>
+
+<body>
+    <div id="Content">
+        <div class="container  maxwidth mt-5 mb-5">
+            <div class="row">
+                <div class="col-12 text-center mb-3">
+                    <h3>給我們的意見</h3>
+                </div>
+                <div class="col-12">
+                    <p>Hello, 我們非常樂意傾聽您對我們的各種意見，無論是您喜歡的任何事物，或是您認為我們能再做得更好的地方。請您一定要告訴我們，我們會盡可能地在第一時間回覆您的回饋意見</p>
+                </div>
+            </div>
+            <div class="row set-tab">
+                <div class="col-12 col-md-6 mb-3 mb-md-0 md-2-pr">
+                    <div class="btn btn-primary btn-block">給我們回饋</div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="btn btn-outline-primary btn-block md-2-pr">通知系統錯誤</div>
+                </div>
+            </div>
+            <hr>
+            <div class="row tab-result">
+                <!-- 給我們回饋 -->
+                <div class="col">
+                    <form action="">
+                        <h5 class="mb-3">給我們回饋</h5>
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option value="" disabled selected hidden>您的回饋意見是</option>
+                                <option value="">想給我們加油、鼓勵</option>
+                                <option value="">我們可以改善的方面</option>
+                                <option value="">您要推薦、稱讚您的Guider</option>
+                                <option value="">您不滿意您的Guider</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="輸入你想說的話"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">送出</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- 通知系統錯誤 -->
+                <div class="col" style="display:none;">
+                    <form action="">
+                        <h5 class="mb-3">通知系統錯誤</h5>
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option value="" disabled selected hidden>系統哪裡出問題</option>
+                                <option value="">預訂流程</option>
+                                <option value="">後台設定</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="輸入你想說的話"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">送出</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+    $(function() {
+        $('.set-tab .col-md-6 > div').click(function() {
+
+            ii = $(this).parent(".col-md-6").index();
+            $(this).addClass('btn-primary').removeClass('btn-outline-primary').parent(".col-md-6").siblings().find("div").addClass('btn-outline-primary').removeClass('btn-primary');
+            $('.tab-result > .col').eq(ii).toggle().siblings().toggle();
+        })
+
+    })
+    </script>
+</body>
+
+</html>
