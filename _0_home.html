@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link href="https://file.myfontastic.com/RKp9uZow9CbK4GQhmp49FN/icons.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style type="text/css">
+    @import url(css/all.css);
+    </style>
+</head>
+
+<body>
+    <div id="Content" class="post-page">
+        <div id="home-slider" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#home-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#home-slider" data-slide-to="1"></li>
+                <li data-target="#home-slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active fullscreen">
+                    <div class="" style="background-image:url('https://images.unsplash.com/photo-1517449905587-f80695d63356?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=36dd87f58a5389c9820df1b6420e0f48&auto=format&fit=crop&w=1949&q=80')" alt="First slide"></div>
+                </div>
+                <div class="carousel-item fullscreen">
+                    <div class="" style="background-image:url('https://images.unsplash.com/photo-1498855926480-d98e83099315?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd3d1480eb354a13a4342630a9259505&auto=format&fit=crop&w=1950&q=80')" alt="Second slide"></div>
+                </div>
+                <div class="carousel-item fullscreen">
+                    <div class="" style="background-image:url('https://images.unsplash.com/photo-1467173572719-f14b9fb86e5f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=14fc993a6e26bbde4869a42f7969ba02&auto=format&fit=crop&w=1951&q=80')" alt="Third slide"></div>
+                </div>
+            </div>
+        </div>
+        <div id="home-content">
+            <div class="container">
+                <form action="">
+                    <div class="row home-title">
+                        <div class="col-12 text-center text-white pb-3">
+                            <h1>Make Your Own Trip !</h1>
+                            <h4 class="font-weight-bold">探索在地體驗</br>你的在地旅遊經驗</h4>
+                        </div>
+                    </div>
+                    <div class="row search mt-sm-3 mb-sm-3 mb-md-0 pt-4 pb-2">
+                        <div class="col-12 pb-3">
+                            <div class="box-4">
+                                <div class="search-box" data-attr="0"><i class="fas fa-map-marker-alt"></i> 城市或目的地</div>
+                            </div>
+                            <div class="box-4">
+                                <div class="search-box" data-attr="1"><i class="fas fa-calendar-alt"></i> 旅遊日期</div>
+                            </div>
+                            <div class="box-4">
+                                <div class="search-box" data-attr="2"><i class="fas fa-user"></i> <span class="person-output">1成人</span></div>
+                            </div>
+                            <div class="box-4 d-none d-md-block">
+                                <button class="btn btn-secondary btn-block">尋找 Guider</button>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="box-5">
+                                <button type="button" data-attr="3" class="search-box btn btn-outline-light btn-block">語言</button>
+                            </div>
+                            <div class="box-5">
+                                <button type="button" data-attr="4" class="search-box btn btn-outline-light btn-block">性別</button>
+                            </div>
+                            <div class="box-5">
+                                <button type="button" data-attr="5" class="search-box btn btn-outline-light btn-block">旅遊愛好</button>
+                            </div>
+                            <div class="box-5">
+                                <button type="button" data-attr="6" class="search-box btn btn-outline-light btn-block">價格範圍</button>
+                            </div>
+                            <div class="box-5">
+                                <button type="button" data-attr="7" class="search-box btn btn-outline-light btn-block">汽車服務</button>
+                            </div>
+                            <div class="box-4 d-block d-md-none">
+                                <button class="btn btn-secondary btn-block">尋找 Guider</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mask"></div>
+                    <div class="row search-detail bg-white">
+                        <div class="col-12 detail-box">
+                            <div class="d-flex">
+                                <div class="">
+                                    <h5>城市或目的地</h5>
+                                </div>
+                                <div class="ml-auto sm-close"><i class="fas fa-times"></i></div>
+                            </div>
+                            <hr class="mt-0">
+                            <p>搜尋</p>
+                        </div>
+                        <div class="col-12 detail-box">
+                            <div class="d-flex">
+                                <div class="">
+                                    <h5>旅遊日期</h5>
+                                </div>
+                                <div class="ml-auto sm-close"><i class="fas fa-times"></i></div>
+                            </div>
+                            <hr class="mt-0">
+                            <p>放日曆</p>
+                        </div>
+                        <div class="col-12 detail-box">
+                            <div class="d-flex">
+                                <div class="">
+                                    <h5>選擇人數</h5>
+                                </div>
+                                <div class="ml-auto sm-close"><i class="fas fa-times"></i></div>
+                            </div>
+                            <hr class="mt-0">
+                            <div class="row search-person pb-3">
+                                <div class="col-12 mb-3 person-counter">
+                                    <p class="text-center">成人</p>
+                                    <div class="num" data-max="9" data-min="1">
+                                        <span class="minus num-limit" data-attr="minus"><i class="fas fa-minus"></i></span>
+                                        <input type="text" value="1" class="qty" readonly>
+                                        <span class="add" data-attr="add"><i class="fas fa-plus"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3 person-counter">
+                                    <p class="text-center">孩童</p>
+                                    <div class="num" data-max="4" data-min="0">
+                                        <span class="minus num-limit" data-attr="minus"><i class="fas fa-minus"></i></span>
+                                        <input type="text" value="0" class="qty" readonly>
+                                        <span class="add" data-attr="add"><i class="fas fa-plus"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3 person-counter">
+                                    <p class="text-center">嬰兒</p>
+                                    <div class="num" data-max="4" data-min="0">
+                                        <span class="minus num-limit" data-attr="minus"><i class="fas fa-minus"></i></span>
+                                        <input type="text" value="0" class="qty" readonly>
+                                        <span class="add" data-attr="add"><i class="fas fa-plus"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 detail-box">
+                            <div class="d-flex">
+                                <div class="">
+                                    <h5>語言</h5>
+                                </div>
+                                <div class="ml-auto sm-close"><i class="fas fa-times"></i></div>
+                            </div>
+                            <hr class="mt-0">
+                            <div class="row">
+                                <div class="form-group col-12">
+                                    <select class="form-control" id="selectLang">
+                                        <option value="選擇你會的語言！" disabled selected>選擇語言</option>
+                                        <option value="語言1">語言1</option>
+                                        <option value="語言2">語言2</option>
+                                        <option value="語言3">語言3</option>
+                                    </select>
+                                </div>
+                                <div class="col-12"></div>
+                            </div>
+                        </div>
+                        <div class="col-12 detail-box">
+                            <div class="d-flex">
+                                <div class="">
+                                    <h5>性別</h5>
+                                </div>
+                                <div class="ml-auto sm-close"><i class="fas fa-times"></i></div>
+                            </div>
+                            <hr class="mt-0">
+                            <div class="row">
+                                <div class="form-group set-choose col-12 col-sm-6 sm-2-pr">
+                                    <input class="" type="radio" name="gender" id="male" value="男">
+                                    <label class="btn btn-outline-primary" for="male">男</label>
+                                </div>
+                                <div class="form-group set-choose col-12 col-sm-6 sm-2-pr">
+                                    <input class="" type="radio" name="gender" id="female" value="女">
+                                    <label class="btn btn-outline-primary" for="female">女</label>
+                                </div>
+                                <div class="form-group set-choose col-12">
+                                    <input class="show-more" type="checkbox" id="rainbow" value="彩虹">
+                                    <label class="btn btn-outline-primary" for="rainbow">彩虹</label>
+                                </div>
+                                <div class="col-12 show-more-des" style="display:none;">
+                                    <p>Guider致力於建立一個沒有不同的世界，並期待於不久的將來我們能夠一起達成這個目標。</p>
+                                    <p>藉由您的勾選讓有此需求的旅者能夠更容易的找到最適合自己的Guider，並且您能為自己製造賺取更多收入的機會，最重要的事，距離我們期盼未來世界沒有不同的目標又往前邁進了一大步。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 detail-box">
+                            <div class="d-flex">
+                                <div class="">
+                                    <h5>旅遊愛好</h5>
+                                </div>
+                                <div class="ml-auto sm-close"><i class="fas fa-times"></i></div>
+                            </div>
+                            <hr class="mt-0">
+                            <div class="row search-travel-love pb-3">
+                                <div class="col-12 col-md-6 md-2-pr">
+                                    <input class="" type="checkbox" id="travelLove1" value="1">
+                                    <label for="travelLove1"><i class="icon-gu-museum"></i>History & Temple</label>
+                                </div>
+                                <div class="col-12 col-md-6 md-2-pr">
+                                    <input class="" type="checkbox" id="travelLove2" value="2">
+                                    <label for="travelLove2"><i class="icon-gu-translate"></i>Translation & Interpretation</label>
+                                </div>
+                                <div class="col-12 col-md-6 md-2-pr">
+                                    <input class="" type="checkbox" id="travelLove3" value="3">
+                                    <label for="travelLove3"><i class="icon-gu-exhibition"></i>Exhibition & Museum</label>
+                                </div>
+                                <div class="col-12 col-md-6 md-2-pr">
+                                    <input class="" type="checkbox" id="travelLove6" value="6">
+                                    <label for="travelLove6"><i class="icon-gu-family"></i>Family (or kid)-friendly</label>
+                                </div>
+                                <div class="col-12 col-md-6 md-2-pr">
+                                    <input class="" type="checkbox" id="travelLove7" value="7">
+                                    <label for="travelLove7"><i class="icon-gu-shopping"></i>Shopping</label>
+                                </div>
+                                <div class="col-12 col-md-6 md-2-pr">
+                                    <input class="" type="checkbox" id="travelLove8" value="8">
+                                    <label for="travelLove8"><i class="icon-gu-camera"></i>Personal Photographer</label>
+                                </div>
+                                <div class="col-12 col-md-6 md-2-pr">
+                                    <input class="" type="checkbox" id="travelLove9" value="9">
+                                    <label for="travelLove9"><i class="icon-gu-bar"></i>Night life</label>
+                                </div>
+                                <div class="col-12 col-md-6 md-2-pr">
+                                    <input class="" type="checkbox" id="travelLove10" value="10">
+                                    <label for="travelLove10"><i class="icon-gu-cafe"></i>Café hopping</label>
+                                </div>
+                                <div class="col-12 col-md-6 md-2-pr">
+                                    <input class="" type="checkbox" id="travelLove11" value="11">
+                                    <label for="travelLove11"><i class="icon-gu-mountain"></i>Sightseeing & Scenery</label>
+                                </div>
+                                <div class="col-12 col-md-6 md-2-pr">
+                                    <input class="" type="checkbox" id="travelLove12" value="12">
+                                    <label for="travelLove12"><i class="icon-gu-divination"></i>Fortune teller</label>
+                                </div>
+                                <div class="col-12 col-md-6 md-2-pr">
+                                    <input class="" type="checkbox" id="travelLove13" value="13">
+                                    <label for="travelLove13"><i class="icon-gu-spa"></i>Spa & Massages</label>
+                                </div>
+                                <div class="col-12 col-md-6 md-2-pr">
+                                    <input class="" type="checkbox" id="travelLove14" value="14">
+                                    <label for="travelLove14"><i class="icon-gu-cook"></i>Cooking class</label>
+                                </div>
+                                <div class="col-12 col-md-6 md-2-pr">
+                                    <input class="" type="checkbox" id="travelLove15" value="15">
+                                    <label for="travelLove15"><i class="icon-gu-restaurant"></i>Food, Restaurant & Night market</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 detail-box">
+                            <div class="d-flex">
+                                <div class="">
+                                    <h5>價格範圍</h5>
+                                </div>
+                                <div class="ml-auto sm-close"><i class="fas fa-times"></i></div>
+                            </div>
+                            <hr class="mt-0">
+                            <div class="pb-5">
+                                <h4>
+                                    <input type="text" id="amount" readonly class="text-danger font-weight-bold">
+                                </h4>
+                                <div class="mt-3" id="slider-range"></div>
+                            </div>
+                        </div>
+                        <div class="col-12 detail-box">
+                            <div class="d-flex">
+                                <div class="">
+                                    <h5>汽車服務</h5>
+                                </div>
+                                <div class="ml-auto sm-close"><i class="fas fa-times"></i></div>
+                            </div>
+                            <hr class="mt-0">
+                            <div class="form-group form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="carService" required>
+                                <label class="form-check-label" for="carService">搜尋有汽車服務的Guider</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+   <!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $(function() {
+        $('.carousel').carousel({
+            interval: 8000
+        });
+
+        //       搜尋框
+        $(".search-box").on("click", function() {
+            var $this = $(this),
+                index = parseInt($this.attr("data-attr")),
+                $box = $(".search-detail .detail-box").eq(index);
+            $box.show().siblings().hide();
+            $(".mask").show();
+        });
+        $(".detail-box .sm-close").on("click", function() {
+            var $detail = $(this).closest(".detail-box");
+            $detail.hide();
+            $(".mask").hide();
+        });
+        // 人數
+        function addMinusQty() {
+            $(".num span").on("click", function() {
+                var $this = $(this),
+                    //data-attr of '.num span' (see html)
+                    attr = $this.attr("data-attr"),
+                    $input = $this.closest(".num").find(".qty"),
+                    $add = $this.closest(".num").find(".add"),
+                    $minus = $this.closest(".num").find(".minus"),
+                    //data-max of '.num' (see html)
+                    maxQty = $this.closest(".num").data("max"),
+                    minQty = $this.closest(".num").data("min");
+
+                if (attr == "add" && $input.val() < maxQty) {
+                    var value = parseInt($input.val()) + 1;
+                    $input.val(value);
+                    $minus.removeClass("num-limit");
+
+                    if (value == maxQty) {
+                        $add.addClass("num-limit");
+                    }
+                } else if (attr == "minus" && $input.val() > minQty) {
+                    var value = parseInt($input.val()) - 1;
+                    $input.val(value);
+                    $add.removeClass("num-limit");
+
+                    if (value == minQty) {
+                        $minus.addClass("num-limit");
+                    }
+                }
+            });
+        }
+        addMinusQty();
+
+        function personoutput() {
+            var $output = $(".person-output"),
+                adult = $(".person-counter").eq(0).find("input").val(),
+                child = $(".person-counter").eq(1).find("input").val(),
+                baby = $(".person-counter").eq(2).find("input").val();
+            $output.text("成人" + adult);
+            if (child != 0) {
+                $output.append(", 孩童" + child)
+            }
+            if (baby != 0) {
+                $output.append(", 嬰兒" + baby)
+            }
+
+        }
+        personoutput();
+        $(".num span").on("click", function() {
+            personoutput();
+        });
+        // 語言標籤
+        $("#selectLang").change(function(e) {
+            e.preventDefault();
+            var $this = $(this),
+                str = $this.val(),
+                index = $this.find("option:selected").index();
+            $this.find("option:eq(" + index + ")").attr("disabled", "disabled");
+            console.log(index);
+            $this
+                .closest(".form-group")
+                .siblings(".col-12")
+                .append(
+                    "<div class='lang-result' attr-index='" +
+                    index +
+                    "'><span><i class='fas fa-times'></i></span> " +
+                    str +
+                    "</div>"
+                );
+            $(".lang-result").click(function() {
+                var $this = $(this),
+                    attr = $(this).attr("attr-index"),
+                    index = parseFloat(attr);
+                $this.remove();
+                console.log(index);
+                $("#selectLang option:eq(" + index + ")").removeAttr("disabled");
+                if ($this.parent().length == 0) {
+                    $("#selectLang option[value='選擇你會的語言！']").prop("selected", true);
+                }
+            });
+        });
+
+        // 顯示更多
+        $(".show-more").change(function() {
+            var $this = $(this),
+                $show_more = $this.closest(".row").find(".show-more-des");
+            if ($this.is(":checked")) {
+                $show_more.slideDown();
+            } else {
+                $show_more.slideUp();
+            }
+        });
+        $(".show-less").click(function() {
+            var $this = $(this),
+                $show_more = $this.closest(".row").find(".show-more-des");
+            if ($this.is(":checked")) {
+                $show_more.slideUp();
+            }
+        });
+        //       價格範圍
+        $("#slider-range").slider({
+            range: true,
+            min: 100,
+            max: 3000,
+            values: [100, 1000],
+            slide: function(event, ui) {
+                $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
+        });
+        $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+            " - $" + $("#slider-range").slider("values", 1));
+    });
+    </script>
+</body>
+
+</html>

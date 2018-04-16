@@ -205,7 +205,8 @@ button:active,
 .show > .btn-primary.dropdown-toggle:focus,
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
 .show>.btn-outline-primary.dropdown-toggle:focus,
-.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus{
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus,
+.btn-outline-light:not(:disabled):not(.disabled):active:focus{
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -799,6 +800,12 @@ body {
     cursor: pointer;
   span{padding-right:10px;}
 }
+.search-option{
+  @extend .lang-result;
+  background:$primary-tint;
+  color:$white;
+  margin-bottom: 5px;
+}
 // REVIEW
 .star-rate .fa-star {
   color: $gray-300;
@@ -1055,6 +1062,13 @@ body {
   max-width:280px;
   margin:auto;
   margin-bottom:2rem;
+  img{
+    transition:.5s;
+  }
+  &:hover img{
+    transform:scale(1.1);
+    transition:.8s;
+  }
   .guider-link{ 
     display:block;
     padding:40px 15px 0;
@@ -1098,6 +1112,18 @@ body {
         border:0;
         padding:0;
         font-size:1.25rem;
+      }
+      .in-wishlist{
+        color:$pink;
+        line-height: 1.5;
+      }
+      .add-wishlist{
+        transition:.5s;
+        color:$gray-300;
+      }
+      .add-wishlist:hover{
+        transition:.5s;
+        color:$pink;
       }
       .remove-wishlist{
         transition:.5s;
@@ -1175,5 +1201,56 @@ body {
   }
   
 }
-
+// GUIDER
+@media (min-width: 1780px){
+  .max-95 .guider-item{
+    flex: 0 0 20%;
+    max-width: 20%; 
+  }
+}
+// 首頁輪播
+.carousel-item.fullscreen{
+  width:100%;
+  height:100vh;
+  >div{
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+// PRICE SLIDER
+#amount{
+  border:0;
+}
+.ui-slider{
+  position: relative;
+  text-align: left;
+  height: .8rem;
+  background: $gray-100;
+  max-width: 95%;
+}
+.ui-slider .ui-slider-range{
+    background:$secondary;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.ui-state-default{
+  @extend .shadow;
+  @include border-radius(50%);
+    border: 1px solid $gray-300;
+    background: $white;
+    top: -.5rem;
+    margin-left: -.6rem;
+    position: absolute;
+    z-index: 2;
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: default;
+  &:focus{
+    outline:0;
+  }
+}
 

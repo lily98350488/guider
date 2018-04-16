@@ -129,8 +129,6 @@
         //  側邊欄
         function stickySidebar() {
             $("#sticky-side-bar .open-icon").on("click", function() {
-
-
                 var $this = $(this),
                     other = $this.siblings(".close-icon"),
                     hide = $(".card-hide");
@@ -148,6 +146,9 @@
             });
         }
         stickySidebar();
+    });
+    jQuery(document).ready(function($){ 
+         $("#woosvithumbs").before($("#woosvi_strap.slider-vertical-l div#woosvithumbs.swiper-container-vertical .swiper-button-prev").detach());
     });
     </script>
 </body>
