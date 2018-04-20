@@ -377,6 +377,12 @@ input[type="checkbox"] {
   .sm-select::-ms-expand {
     display: none; }
 
+span.rainbow {
+  padding-left: 35px;
+  background-image: url(/guider-project/img/rainbow.png);
+  background-repeat: no-repeat;
+  background-size: contain; }
+
 .sm-2-pr, .md-2-pr {
   margin-right: -10px;
   padding-right: 10px; }
