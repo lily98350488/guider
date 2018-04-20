@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+	<title>Document</title>
+	<style type="text/css">
+  @import url(css/backend.css);
+	</style>
+</head>
+<body>
+  <div class="box container-fluid d-md-flex-nowrap">
+    <div class="row">
+      <nav class="navbar navbar-expand-md col-12 col-md-2 col-lg-2 navbar-light flex-md-column">
+        <a class="navbar-brand" href="#">Guider平台<span>管理後端</span></a>
+        <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav flex-md-column">
+            <li class="nav-item">
+              <a class="nav-link" href="#">帳號</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">預約記錄</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          部落格</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">文章列表</a>
+                <a class="dropdown-item" href="#">分類</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">行銷功能</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">設定</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">登出</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="main col-12 col-md-10 col-lg-10">
+      <div class="row">
+        <div class="col-12 mb-3">
+            <div class="main-bar">
+              <div class="main-bar-a mb-2">
+                <div class="main-bar-items pr-1 pl-1">
+                  <a style="color:#818181;">
+                    <span class="text-warning">
+                      <i class="fas fa-clock"></i>
+                    </span><small>等待接受</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-secondary">
+                      <i class="fas fa-arrow-alt-circle-left"></i>
+                    </span><small>撤回(100)</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-primary">
+                      <i class="fas fa-adjust"></i>
+                    </span><small>接受(256)</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-danger">
+                      <i class="fas fa-times-circle"></i>
+                    </span><small>取消(28)</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-success">
+                      <i class="fas fa-check-circle"></i>
+                    </span><small>完成(10)</small>
+                  </a>
+                </div>
+              </div>
+              <div class="main-bar-right mb-2">
+                <div class="main-bar-input input-search input-group">
+                  <input type="text" class="input-area input-area-36px form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="input-btn btn" type="button">搜尋</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content_t col-12">
+              <table>
+                <tr>
+                  <th style="min-width:50px;">狀態</th>
+                  <th style="min-width:90px;">Guider</th>
+                  <th style="min-width:175px;">旅者</th>
+                  <th style="min-width:105px;">預約日期</th>
+                  <th style="min-width:65px;">目的地</th>
+                  <th style="min-width:115px;">旅者應付金額</th>
+                  <th style="min-width:130px;">平台收取服務費</th>
+                  <th style="min-width:50px;">查看</th>
+                </tr>
+                <tr>
+                  <td><span class="text-warning pl-2" data-toggle="tooltip" data-placement="top" title="等待接受"><i class="fas fa-clock"></i></span></td>
+                  <td>陳依依</td>
+                  <td>Esther J.Mcllvain</td>
+                  <td>2017-04-20</td>
+                  <td>Taiwan</td>
+                  <td>$4,360.00</td>
+                  <td>$621.60</td>
+                  <td><a href="#">查看</a></td>
+                </tr>
+              </table>
+            </div>
+        </div>
+        <div class="col-12 mb-3">
+          <div class="main-bar">
+              <div class="main-bar-a mb-2">
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-warning">
+                      <i class="fas fa-clock"></i>
+                    </span><small>等待接受</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a style="color:#818181;">
+                    <span class="text-secondary">
+                      <i class="fas fa-arrow-alt-circle-left"></i>
+                    </span><small>&nbsp撤回(100)</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-primary">
+                      <i class="fas fa-adjust"></i>
+                    </span><small>接受(256)</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-danger">
+                      <i class="fas fa-times-circle"></i>
+                    </span><small>取消(28)</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-success">
+                      <i class="fas fa-check-circle"></i>
+                    </span><small>完成(10)</small>
+                  </a>
+                </div>
+              </div>
+            <div class="main-bar-right"></div>
+          </div>
+          <div class="content_t col-12">
+            <table>
+                <tr>
+                  <th style="min-width:50px;">狀態</th>
+                  <th style="min-width:90px;">Guider</th>
+                  <th style="min-width:175px;">旅者</th>
+                  <th style="min-width:105px;">預約日期</th>
+                  <th style="min-width:65px;">目的地</th>
+                  <th style="min-width:115px;">旅者應付金額</th>
+                  <th style="min-width:130px;">平台收取服務費</th>
+                  <th style="min-width:50px;">查看</th>
+                </tr>
+                <tr>
+                  <td><span class="text-secondary pl-2" data-toggle="tooltip" data-placement="top" title="Guider撤回"><i class="fas fa-arrow-alt-circle-left"></i></span></td>
+                  <td>陳依依</td>
+                  <td>Esther J.Mcllvain</td>
+                  <td>2017-04-20</td>
+                  <td>Taiwan</td>
+                  <td>$4,360.00</td>
+                  <td>$621.60</td>
+                  <td><a href="#">查看</a></td>
+                </tr>
+                <tr>
+                  <td><span class="text-secondary pl-2" data-toggle="tooltip" data-placement="top" title="旅者撤回"><i class="far fa-arrow-alt-circle-left"></i></span></td>
+                  <td>Amy Chen</td>
+                  <td>ผู้หญิงเกิดในฤตูใบไม้ร่วง</td>
+                  <td>2017-03-08</td>
+                  <td>Taiwan</td>
+                  <td>$1,280.00</td>
+                  <td>$289.60</td>
+                  <td><a href="#">查看</a></td>
+                </tr>
+              </table>
+          </div>
+        </div>
+        <div class="col-12 mb-3">
+          <div class="main-bar">
+              <div class="main-bar-a mb-2">
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-warning">
+                      <i class="fas fa-clock"></i>
+                    </span><small>&nbsp等待接受</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-secondary">
+                      <i class="fas fa-arrow-alt-circle-left"></i>
+                    </span><small>撤回(100)</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a style="color:#818181;">
+                    <span class="text-primary">
+                      <i class="fas fa-adjust"></i>
+                    </span><small>&nbsp接受(256)</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-danger">
+                      <i class="fas fa-times-circle"></i>
+                    </span><small>取消(28)</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-success">
+                      <i class="fas fa-check-circle"></i>
+                    </span><small>完成(10)</small>
+                  </a>
+                </div>
+              </div>
+              <div class="main-bar-right"></div>
+          </div>
+          <div class="content_t col-12">
+            <table>
+                <tr>
+                  <th style="min-width:50px;">狀態</th>
+                  <th style="min-width:90px;">Guider</th>
+                  <th style="min-width:175px;">旅者</th>
+                  <th style="min-width:105px;">預約日期</th>
+                  <th style="min-width:65px;">目的地</th>
+                  <th style="min-width:115px;">旅者應付金額</th>
+                  <th style="min-width:130px;">平台收取服務費</th>
+                  <th style="min-width:50px;">查看</th>
+                </tr>
+                <tr>
+                  <td><span class="text-primary pl-2" data-toggle="tooltip" data-placement="top" title="接受"><i class="fas fa-adjust"></i></span></td>
+                  <td>陳依依</td>
+                  <td>Esther J.Mcllvain</td>
+                  <td>2017-04-20</td>
+                  <td>Taiwan</td>
+                  <td>$4,360.00</td>
+                  <td>$621.60</td>
+                  <td><a href="#">查看</a></td>
+                </tr>
+                <tr>
+                  <td><span class="text-primary pl-2" data-toggle="tooltip" data-placement="top" title="接受"><i class="fas fa-adjust"></i></td>
+                  <td>Amy Chen</td>
+                  <td>ผู้หญิงเกิดในฤตูใบไม้ร่วง</td>
+                  <td>2017-03-08</td>
+                  <td>Taiwan</td>
+                  <td>$1,280.00</td>
+                  <td>$289.60</td>
+                  <td><a href="#">查看</a></td>
+                </tr>
+              </table>
+          </div>
+        </div>
+        <div class="col-12 mb-3">
+            <div class="main-bar">
+              <div class="main-bar-a mb-2">
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-warning">
+                      <i class="fas fa-clock"></i>
+                    </span><small>等待接受</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-secondary">
+                      <i class="fas fa-arrow-alt-circle-left"></i>
+                    </span><small>&nbsp撤回(100)</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-primary">
+                      <i class="fas fa-adjust"></i>
+                    </span><small>接受(256)</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a style="color:#818181;">
+                    <span class="text-danger">
+                      <i class="fas fa-times-circle"></i>
+                    </span><small>取消(28)</small>
+                  </a>
+                </div>
+                <div class="main-bar-items pr-1 pl-1">
+                  <a href="#">
+                    <span class="text-success">
+                      <i class="fas fa-check-circle"></i>
+                    </span><small>完成(10)</small>
+                  </a>
+                </div>
+              </div>
+              <div class="main-bar-right mb-2">
+              </div>
+            </div>
+            <div class="content_t col-12 mb-2">
+              <table>
+                <tr>
+                  <th style="min-width:50px;">狀態</th>
+                  <th style="min-width:150px;">Guider</th>
+                  <th style="min-width:175px;">旅者</th>
+                  <th style="min-width:105px;">預約日期</th>
+                  <th style="min-width:65px;">目的地</th>
+                  <th style="min-width:110px;">旅者應付金額</th>
+                  <th style="min-width:130px;">退費金額</th>
+                  <th style="min-width:50px;">查看</th>
+                </tr>
+                <tr>
+                  <td><span class="text-danger pl-2" data-toggle="tooltip" data-placement="top" title="取消"><i class="fas fa-times-circle"></i></span></td>
+                  <td>陳依依</td>
+                  <td>Esther J.Mcllvain</td>
+                  <td>2017-04-20</td>
+                  <td>Taiwan</td>
+                  <td>$3,480.00</td>
+                  <td>$0</td>
+                  <td><a href="#">查看</a></td>
+                </tr>
+                <tr>
+                  <td><span class="text-danger pl-2" data-toggle="tooltip" data-placement="top" title="旅者申請取消"><i class="far fa-times-circle"></i></span></td>
+                  <td>Amy Chen</td>
+                  <td>Ebony G. Arnett</td>
+                  <td>2017-03-08</td>
+                  <td>Taiwan</td>
+                  <td>$1,280.00</td>
+                  <td>$1,280.00</td>
+                  <td><a href="#">查看</a></td>
+                </tr>
+                <tr>
+                  <td><span class="text-danger pl-2" data-toggle="tooltip" data-placement="top" title="取消"><i class="fas fa-times-circle"></i></span></td>
+                  <td>Kathleen C. Coker</td>
+                  <td>ผู้หญิงเกิดในฤตูใบไม้ร่วง</td>
+                  <td>2017-02-18</td>
+                  <td>Taiwan</td>
+                  <td>$1,080.00</td>
+                  <td>$540.00&nbsp<span class="badge badge-success">已轉帳</span></td>
+                  <td><a href="#">查看</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-12 pagination-right">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                     </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!-- checked -->

@@ -611,9 +611,9 @@ a{
 @media (min-width: 768px) {
   #home-content{
     width:100%;
-    height:100vh;
+    height:calc(100vh - 80px);
     position:absolute;
-    top:0;
+    top:80px;
     .container{
       position:relative;
       top: 15%;
@@ -762,7 +762,7 @@ a{
     .search-person{
       max-width:initial;
       .person-counter{
-       max-width: 300px;
+       max-width: 400px;
     margin:auto;
       }
   }
@@ -814,4 +814,151 @@ a{
     }
   }
 }
+}
+// 4-3
+#accordion{
+  padding:0;
+  .card-header{
+    cursor:pointer;
+    border-bottom:1px solid $gray-100;
+  }
+}
+// 1-1
+.become-guider-header{
+  background-color: #F9F6ED; 
+  .header-bg{
+    margin:auto;
+  
+    background: #F9F6ED url("/guider-project/img/become-bg.png") no-repeat center center;
+    position:relative;
+  }
+  .header-title{
+    position:absolute;
+  }
+  .header-footer{
+    position:absolute;
+    right: 0;
+    left: 0;
+    bottom: 0px;
+    margin:auto;
+  }
+}
+@media (min-width: 1200px) {
+  .become-guider-header{
+    .container-fluid{
+      // padding-top: 30px;
+      padding-bottom: 30px;
+     }
+    .header-bg{
+      max-width:1650px;
+      padding-bottom: 36%;
+      background-position: center center;
+      background-size: contain;
+    }
+    .header-title{
+     left: 5%;
+     top: 18%;
+    }
+    .header-footer{
+      bottom: -10px;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px){
+  .become-guider-header{
+  .container-fluid{
+      padding-top: 30px;
+    padding-bottom: 60px;
+   }
+  .header-bg{
+    padding-bottom: 36%;
+    background-position: center center;
+    background-size: contain;
+  }
+  .header-footer{
+    bottom: -50px;
+  }
+}
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .become-guider-header{
+  .container-fluid{
+    padding: 0;
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+  .header-bg{
+    padding-bottom: 300px;
+    background-position: right center;
+    background-size: cover;
+  }
+  .header-title{
+    top: -100px;
+    padding:0 10px;
+  }
+  .header-footer{
+    bottom: -60px;
+    padding:0 10px;
+  }
+}
+}
+@media (max-width: 575.98px) {
+  .become-guider-header{
+  .container-fluid{
+    padding: 0;
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+  .header-bg{
+    padding-bottom: 300px;
+    background-position: right center;
+    background-size: cover;
+  }
+  .header-title{
+    top: -120px;
+    padding:0 10px;
+  }
+  .header-footer{
+    bottom: -80px;
+    padding:0 10px;
+  }
+}
+}
+
+// 4-2
+.process-tab{
+  margin-top: 1rem;
+  .decor{
+      display:none;
+  }
+  .max-img img{
+    max-height:300px;
+  }
+}
+@media (min-width: 576px) {
+  .process-tab{
+    margin-top: 3rem;
+    .decor{
+    position: absolute;
+    bottom: 56px;
+    width: calc(100% - 5px);
+    z-index: -1;
+    background-color: #faa;
+    padding: 0;
+    padding-top: 20%;
+    }
+    .tab-first .decor{
+      background:transparent url("/guider-project/img/process-g.png") no-repeat center bottom;
+      background-size:contain;
+    }
+    .tab-last .decor{
+      background:transparent url("/guider-project/img/process-t.png") no-repeat center bottom;
+      background-size:contain;
+    }
+  }
+}
+@media (min-width: 992px) { 
+  .process-tab{
+    margin-top: 6rem;
+  }
 }

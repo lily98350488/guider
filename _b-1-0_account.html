@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style type="text/css">
+  @import url(css/backend.css);
+  </style>
+</head>
+<body>
+  <div class="box container-fluid d-md-flex-nowrap">
+    <div class="row">
+      <nav class="navbar navbar-expand-md col-12 col-md-2 col-lg-2 navbar-light flex-md-column">
+        <a class="navbar-brand" href="#">Guider平台<span>管理後端</span></a>
+        <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav flex-md-column">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">帳號</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">預約記錄</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          部落格</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">文章列表</a>
+                <a class="dropdown-item" href="#">分類</a>
+              </div>
+            </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">行銷功能</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">設定</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">登出</a>
+      </li>
+    </ul>
+  </div>
+      </nav>
+    <div class="main col-12 col-md-10 col-lg-10">
+      <div class="row">
+        <div class="col-12 mb-3">
+            <div class="main-bar mb-2">
+              <div class="main-bar-a">
+                <a>待審核(8)</a>&nbsp｜
+                <a href="#">Guider(100)</a>&nbsp｜
+                <a href="#">一般會員</a>
+              </div>
+              <div class="main-bar-right">
+                <div class="main-bar-input input-group">
+                  <input type="text" class="input-area input-area-36px form-control" placeholder="輸入信箱搜尋帳號" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="input-btn btn" type="button">搜尋</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="main-bar-btn btn mb-2" type="button" data-toggle="modal" data-target="#sendModal">發信</button>
+            <div class="modal fade" id="sendModal" tabindex="-1" role="dialog" aria-labelledby="sendModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <form action="">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">編輯信件</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="input-group mb-3">
+                        <input type="text" class="input-area form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="主旨">
+                      </div>
+                      <div class="textarea input-group">
+                        <textarea class="input-area textarea-input form-control" aria-label="With textarea" placeholder="在此輸入文章內容，可以貼上圖片"></textarea>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn option-btn" data-dismiss="modal">確認送出</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="content_t mb-2">
+              <table>
+                <tr>
+                  <th><input type="checkbox"></th>
+                  <th>名字</th>
+                  <th>姓氏</th>
+                  <th>信箱</th>
+                  <th style="text-align:center; min-width:100px;">審核</th>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>－－</td>
+                  <td>陳</td>
+                  <td>ag874993@gmail.com</td>
+                  <td style="text-align:center;"><a href="#">審核</a></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Amy</td>
+                  <td>Chen</td>
+                  <td>damychen988@gmail.com</td>
+                  <td style="text-align:center;"><a href="#">審核</a></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>James</td>
+                  <td>Aksjdnddfjn</td>
+                  <td>csbhbh5968@gmail.com</td>
+                  <td style="text-align:center;"><a href="#">審核</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="content_t mb-2">
+              <table>
+                <tr>
+                  <th><input type="checkbox"></th>
+                  <th>名字</th>
+                  <th>姓氏</th>
+                  <th>信箱</th>
+                  <th style="text-align:center; min-width:100px;">超棒Guider</th>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>－－</td>
+                  <td>陳</td>
+                  <td>ag874993@gmail.com</td>
+                  <td style="text-align:center;"></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Amy</td>
+                  <td>Chen</td>
+                  <td>damychen988@gmail.com</td>
+                  <td style="text-align:center;"></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>James</td>
+                  <td>Aksjdnddfjn</td>
+                  <td>csbhbh5968@gmail.com</td>
+                  <td style="text-align:center;">✓</td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-12 pagination-right">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                     </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!-- checked -->
