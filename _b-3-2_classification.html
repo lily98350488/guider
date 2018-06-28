@@ -13,7 +13,7 @@
     <div class="container-fluid d-md-flex-nowrap">
       <div class="row">
         <nav class="navbar navbar-expand-md col-12 col-md-2 col-lg-2 navbar-light flex-md-column">
-        <a class="navbar-brand" href="#">Guider平台<span>管理後端</span></a>
+        <a class="navbar-brand" href="#">Guider後台</a>
         <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,9 +28,9 @@
             <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           部落格</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" style="color:#000000;" href="#">文章列表</a>
-                <a class="dropdown-item" href="#">分類</a>
+              <div class="dropdown-menu show" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">文章列表</a>
+                <a class="dropdown-item active" href="#">分類</a>
               </div>
             </li>
       <li class="nav-item">
@@ -48,7 +48,7 @@
         <div class="main col-12 col-md-10 col-lg-10">
         <div class="row">
           <div class="col-12">
-            <h1>文章列表</h1>
+            <h1>分類</h1>
             <div class="main-bar-input add-classification input-group mt-2 mb-2">
               <input type="text" class="input-area input-area-36px form-control" placeholder="新增分類名稱" aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <div class="input-group-append">
@@ -57,21 +57,25 @@
             </div>
             <div class="content_t col-12">
               <table align="center">
-                <tr>
-                  <th style="width:90%; min-width:100px">分類名稱</th>
-                  <th style="width:5%; min-width:50px;">編輯</th>
-                  <th style="width:5%; min-width:50px;">刪除</th>
-                </tr>
-                <tr>
-                  <td>好旅行</td>
-                  <td><a href="#">編輯</a></td>
-                  <td><a href="#">刪除</a></td>
-                </tr>
-                <tr>
-                  <td>好活動</td>
-                  <td><a href="#">編輯</a></td>
-                  <td><a href="#">刪除</a></td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th style="min-width:735px">分類名稱</th>
+                    <th style="min-width:50px;">編輯</th>
+                    <th style="min-width:50px;">刪除</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>好旅行</td>
+                    <td><a href="#">編輯</a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td>好活動</td>
+                    <td><a href="#">編輯</a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>

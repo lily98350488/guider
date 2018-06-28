@@ -13,7 +13,7 @@
     <div class="container-fluid d-md-flex-nowrap">
     <div class="row">
       <nav class="navbar navbar-expand-md col-12 col-md-2 col-lg-2 navbar-light flex-md-column">
-        <a class="navbar-brand" href="#">Guider平台<span>管理後端</span></a>
+        <a class="navbar-brand" href="#">Guider後台</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,6 +21,9 @@
           <ul class="navbar-nav flex-md-column">
             <li class="nav-item">
               <a class="nav-link" href="#">帳號</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">檢舉Guider</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="#">預約記錄</a>
@@ -77,25 +80,39 @@
           </div>
           <div class="col-12 mb-3">
             <h1>預約資訊</h1><hr>
-            <div class="pl-2 pr-2">
             <h3>目的地：</h3>
               <div class="content_t">
                 <table>
-                  <tr>
-                    <th style="min-width:140px;">日期</th>
-                    <th style="min-width:140px;">時間</th>
-                    <th style="min-width:140px;">時數</th>
-                    <th style="min-width:140px;">總時數</th>
-                  </tr>
-                  <tr>
-                    <td>2017年9月29日</td>
-                    <td>07:00-12:59</td>
-                    <td>6</td>
-                    <td>2</td>
-                  </tr>
+                  <thead>
+                    <tr>
+                      <th style="min-width:140px;">日期</th>
+                      <th style="min-width:140px;">時間</th>
+                      <th style="min-width:140px;">時數</th>
+                      <th style="min-width:140px;">總時數</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2017年9月29日</td>
+                      <td>07:00-12:59</td>
+                      <td>6</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>2017年9月29日</td>
+                      <td>07:00-12:59</td>
+                      <td>6</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>2017年9月29日</td>
+                      <td>07:00-12:59</td>
+                      <td>6</td>
+                      <td>2</td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
-            </div>
           </div>
           <div class="col-12 mb-3">
             <h1>此次旅行人數</h1><hr>
@@ -144,7 +161,7 @@
             </div>
           </div>
         </div>
-        <div class="card mb-4">
+        <div class="card mb-3">
           <h2 class="card-header">詳細付款資訊</h2>
           <div class="card-body">
             <div class="row p-2">
@@ -201,7 +218,7 @@
         </div>
         </div>
         <div class="button mb-3">
-          <button class="btn option-btn" type="button">完成轉帳</button>
+          <button class="btn btn-100 mb-2" type="button">完成轉帳</button>
         </div>
       </div>
       </form>

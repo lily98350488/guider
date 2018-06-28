@@ -13,7 +13,7 @@
   <div class="box container-fluid d-md-flex-nowrap">
     <div class="row">
       <nav class="navbar navbar-expand-md col-12 col-md-2 col-lg-2 navbar-light flex-md-column">
-        <a class="navbar-brand" href="#">Guider平台<span>管理後端</span></a>
+        <a class="navbar-brand" href="#">Guider後台</a>
         <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,6 +21,9 @@
           <ul class="navbar-nav flex-md-column">
             <li class="nav-item">
               <a class="nav-link" href="#">帳號</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">檢舉Guider</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">預約記錄</a>
@@ -60,7 +63,7 @@
               <div class="item col-12 p-2">
                 <h3>折扣種類</h3>
                 <div class="classification form-group">
-                  <select class="custom-select custom-select-default input-area form-control" id="classification">
+                  <select class="custom-select custom-select-default input-area form-control" id="discount">
                     <option>請選擇折扣種類</option>
                     <option>費用折扣</option>
                     <option>%數折扣</option>
@@ -80,30 +83,34 @@
           <div class="row">
             <div class="content_t col-12 mb-2">
               <table>
-                <tr>
-                  <th><input type="checkbox"></th>
-                  <th>名字</th>
-                  <th>姓氏</th>
-                  <th>信箱</th>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>－－</td>
-                  <td>陳</td>
-                  <td>ag874993@gmail.com</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>Amy</td>
-                  <td>Chen</td>
-                  <td>damychen988@gmail.com</td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>James</td>
-                  <td>Aksjdnddfjn</td>
-                  <td>csbhbh5968@gmail.com</td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th><input type="checkbox"></th>
+                    <th>名字</th>
+                    <th>姓氏</th>
+                    <th>信箱</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>－－</td>
+                    <td>陳</td>
+                    <td>ag874993@gmail.com</td>
+                  </tr>
+                  <tr class="table-row-c">
+                    <td><input type="checkbox"></td>
+                    <td>Amy</td>
+                    <td>Chen</td>
+                    <td>damychen988@gmail.com</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>James</td>
+                    <td>Aksjdnddfjn</td>
+                    <td>csbhbh5968@gmail.com</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
@@ -135,8 +142,8 @@
       <div class="card button-card">
         <h2 class="card-header">動作</h2>
         <div class="b-card-body">
-          <button class="btn card-btn" type="button">停用</button>
-          <button class="btn card-btn" type="button">儲存</button>
+          <button class="btn btn-100 mb-2" type="button">停用</button>
+          <button class="btn btn-100 mb-2" type="button">儲存</button>
         </div>
       </div>
     </div>

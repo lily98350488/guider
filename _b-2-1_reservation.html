@@ -13,7 +13,7 @@
   <div class="box container-fluid d-md-flex-nowrap">
     <div class="row">
       <nav class="navbar navbar-expand-md col-12 col-md-2 col-lg-2 navbar-light flex-md-column">
-        <a class="navbar-brand" href="#">Guider平台<span>管理後端</span></a>
+        <a class="navbar-brand" href="#">Guider後台</a>
         <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,6 +21,9 @@
           <ul class="navbar-nav flex-md-column">
             <li class="nav-item">
               <a class="nav-link" href="#">帳號</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">檢舉Guider</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="#">預約記錄</a>
@@ -48,37 +51,37 @@
     <div class="main col-12 col-md-10 col-lg-10">
       <div class="content row">
         <div class="col-12 mb-3">
-          <div class="main-bar mb-2">
-            <div class="main-bar-a">
-              <div class="main-bar-items pr-1 pl-1">
+          <div class="main-bar">
+            <div class="main-bar-a mb-2">
+              <div class="pr-2 pl-2">
                 <a href="#">
                   <span class="text-warning">
                     <i class="fas fa-clock"></i>
                   </span><small>等待接受</small>
                 </a>
               </div>
-              <div class="main-bar-items pr-1 pl-1">
+              <div class="pr-2 pl-2">
                 <a href="#">
                   <span class="text-secondary">
                     <i class="fas fa-reply"></i>
                   </span><small>&nbsp撤回(100)</small>
                 </a>
               </div>
-              <div class="main-bar-items pr-1 pl-1">
+              <div class="pr-2 pl-2">
                 <a href="#">
                   <span class="text-primary">
                     <i class="fas fa-adjust"></i>
                   </span><small>接受(256)</small>
                 </a>
               </div>
-                <div class="main-bar-items pr-1 pl-1">
+                <div class="pr-2 pl-2">
                   <a href="#">
                     <span class="text-danger">
                     <i class="fas fa-times-circle"></i>
                   </span><small>取消(28)</small>
                 </a>
               </div>
-              <div class="main-bar-items pr-1 pl-1">
+              <div class="pr-2 pl-2">
                 <a style="color:#818181;">
                   <span class="text-success">
                     <i class="fas fa-check-circle"></i>
@@ -86,7 +89,7 @@
                 </a>
               </div>
             </div>
-            <div class="main-bar-right">
+            <div class="main-bar-right mb-2">
               <div class="main-bar-item form-group pr-2">
                   <select class="input-area-36px form-control" id="classification">
                     <option>篩選國家</option>
@@ -106,46 +109,50 @@
           </div>
           <div class="content_t mb-2">
             <table>
-              <tr>
-                <th style="min-width:50px;">狀態</th>
-                <th style="min-width:150px;">Guider</th>
-                <th style="min-width:175px;">旅者</th>
-                <th style="min-width:105px;">預約日期</th>
-                <th style="min-width:65px;">目的地</th>
-                <th style="min-width:110px;">旅者應付金額</th>
-                <th style="min-width:130px;">退費金額</th>
+              <thead>
+                <tr>
+                  <th style="min-width:50px;">狀態</th>
+                  <th style="min-width:150px;">Guider</th>
+                  <th style="min-width:175px;">旅者</th>
+                  <th style="min-width:105px;">預約日期</th>
+                  <th style="min-width:65px;">目的地</th>
+                  <th style="min-width:110px;">旅者應付金額</th>
+                  <th style="min-width:130px;">退費金額</th>
                   <th style="min-width:50px;">查看</th>
-              </tr>
-              <tr>
-                <td><span class="text-success pl-2" data-toggle="tooltip" data-placement="top" title="完成"><i class="fas fa-check-circle"></i></span></td>
-                <td>陳依依</td>
-                <td>Esther J.Mcllvain</td>
-                <td>2017-04-20</td>
-                <td>Taiwan</td>
-                <td>$621.60</td>
-                <td>$3738.40</td>
-                <td><a href="#">查看</a></td>
-              </tr>
-              <tr>
-                <td><span class="text-success pl-2" data-toggle="tooltip" data-placement="top" title="完成"><i class="fas fa-check-circle"></i></span></td>
-                <td>Amy Chen</td>
-                <td>Ebony G. Arnett</td>
-                <td>2017-03-08</td>
-                <td>Taiwan</td>
-                <td>$1,26.80</td>
-                <td>$2,280.00</td>
-                <td><a href="#">查看</a></td>
-              </tr>
-              <tr>
-                <td><span class="text-success pl-2" data-toggle="tooltip" data-placement="top" title="完成"><i class="fas fa-check-circle"></i></span></td>
-                <td>Kathleen C. Coker</td>
-                <td>ผู้หญิงเกิดในฤตูใบไม้ร่วง</td>
-                <td>2017-02-18</td>
-                <td>Taiwan</td>
-                <td>$1,200.80</td>
-                <td>$9,654.02&nbsp<span class="badge badge-success">已轉帳</span></td>
-                <td><a href="#">查看</a></td>
-              </tr>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="text-success pl-2" data-toggle="tooltip" data-placement="top" title="完成"><i class="fas fa-check-circle"></i></span></td>
+                  <td>陳依依</td>
+                  <td>Esther J.Mcllvain</td>
+                  <td>2017-04-20</td>
+                  <td>Taiwan</td>
+                  <td>$621.60</td>
+                  <td>$3738.40</td>
+                  <td><a href="#">查看</a></td>
+                </tr>
+                <tr>
+                  <td><span class="text-success pl-2" data-toggle="tooltip" data-placement="top" title="完成"><i class="fas fa-check-circle"></i></span></td>
+                  <td>Amy Chen</td>
+                  <td>Ebony G. Arnett</td>
+                  <td>2017-03-08</td>
+                  <td>Taiwan</td>
+                  <td>$1,26.80</td>
+                  <td>$2,280.00</td>
+                  <td><a href="#">查看</a></td>
+                </tr>
+                <tr>
+                  <td><span class="text-success pl-2" data-toggle="tooltip" data-placement="top" title="完成"><i class="fas fa-check-circle"></i></span></td>
+                  <td>Kathleen C. Coker</td>
+                  <td>ผู้หญิงเกิดในฤตูใบไม้ร่วง</td>
+                  <td>2017-02-18</td>
+                  <td>Taiwan</td>
+                  <td>$1,200.80</td>
+                  <td>$9,654.02&nbsp<span class="badge badge-success">已轉帳</span></td>
+                  <td><a href="#">查看</a></td>
+                </tr>
+              </tbody>
             </table>
           </div>
           <div class="col-12 pagination-right">

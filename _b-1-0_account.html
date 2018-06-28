@@ -13,7 +13,7 @@
   <div class="box container-fluid d-md-flex-nowrap">
     <div class="row">
       <nav class="navbar navbar-expand-md col-12 col-md-2 col-lg-2 navbar-light flex-md-column">
-        <a class="navbar-brand" href="#">Guider平台<span>管理後端</span></a>
+        <a class="navbar-brand" href="#">Guider後台</a>
         <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,6 +21,9 @@
           <ul class="navbar-nav flex-md-column">
             <li class="nav-item active">
               <a class="nav-link" href="#">帳號</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">檢舉Guider</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">預約記錄</a>
@@ -48,13 +51,13 @@
     <div class="main col-12 col-md-10 col-lg-10">
       <div class="row">
         <div class="col-12 mb-3">
-            <div class="main-bar mb-2">
+            <div class="main-bar mb-1">
               <div class="main-bar-a">
                 <a>待審核(8)</a>&nbsp｜
                 <a href="#">Guider(100)</a>&nbsp｜
                 <a href="#">一般會員</a>
               </div>
-              <div class="main-bar-right">
+              <div class="main-bar-right mb-1">
                 <div class="main-bar-input input-group">
                   <input type="text" class="input-area input-area-36px form-control" placeholder="輸入信箱搜尋帳號" aria-label="Recipient's username" aria-describedby="basic-addon2">
                   <div class="input-group-append">
@@ -67,90 +70,96 @@
             <div class="modal fade" id="sendModal" tabindex="-1" role="dialog" aria-labelledby="sendModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                  <form action="">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">編輯信件</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">編輯信件</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="input-group mb-3">
+                      <input type="text" class="input-area form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="主旨">
                     </div>
-                    <div class="modal-body">
-                      <div class="input-group mb-3">
-                        <input type="text" class="input-area form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="主旨">
-                      </div>
-                      <div class="textarea input-group">
-                        <textarea class="input-area textarea-input form-control" aria-label="With textarea" placeholder="在此輸入文章內容，可以貼上圖片"></textarea>
-                      </div>
+                    <div class="textarea input-group">
+                      <textarea class="input-area textarea-input form-control" aria-label="With textarea" placeholder="在此輸入文章內容，可以貼上圖片"></textarea>
                     </div>
-                    <div class="modal-footer">
-                      <button type="submit" class="btn option-btn" data-dismiss="modal">確認送出</button>
-                    </div>
-                  </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="modal-btn btn-100" data-dismiss="modal">確認送出</button>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="content_t mb-2">
               <table>
-                <tr>
-                  <th><input type="checkbox"></th>
-                  <th>名字</th>
-                  <th>姓氏</th>
-                  <th>信箱</th>
-                  <th style="text-align:center; min-width:100px;">審核</th>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>－－</td>
-                  <td>陳</td>
-                  <td>ag874993@gmail.com</td>
-                  <td style="text-align:center;"><a href="#">審核</a></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>Amy</td>
-                  <td>Chen</td>
-                  <td>damychen988@gmail.com</td>
-                  <td style="text-align:center;"><a href="#">審核</a></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>James</td>
-                  <td>Aksjdnddfjn</td>
-                  <td>csbhbh5968@gmail.com</td>
-                  <td style="text-align:center;"><a href="#">審核</a></td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th><input type="checkbox"></th>
+                    <th>名字</th>
+                    <th>姓氏</th>
+                    <th>信箱</th>
+                    <th style="text-align:center; min-width:100px;">審核</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>－－</td>
+                    <td>陳</td>
+                    <td>ag874993@gmail.com</td>
+                    <td style="text-align:center;"><a href="#">審核</a></td>
+                  </tr>
+                  <tr class="table-row-c">
+                    <td><input type="checkbox"></td>
+                    <td>Amy</td>
+                    <td>Chen</td>
+                    <td>damychen988@gmail.com</td>
+                    <td style="text-align:center;"><a href="#">審核</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>James</td>
+                    <td>Aksjdnddfjn</td>
+                    <td>csbhbh5968@gmail.com</td>
+                    <td style="text-align:center;"><a href="#">審核</a></td>
+                  </tr>
+                </tbody>
               </table>
             </div>
             <div class="content_t mb-2">
               <table>
-                <tr>
-                  <th><input type="checkbox"></th>
-                  <th>名字</th>
-                  <th>姓氏</th>
-                  <th>信箱</th>
-                  <th style="text-align:center; min-width:100px;">超棒Guider</th>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>－－</td>
-                  <td>陳</td>
-                  <td>ag874993@gmail.com</td>
-                  <td style="text-align:center;"></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>Amy</td>
-                  <td>Chen</td>
-                  <td>damychen988@gmail.com</td>
-                  <td style="text-align:center;"></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>James</td>
-                  <td>Aksjdnddfjn</td>
-                  <td>csbhbh5968@gmail.com</td>
-                  <td style="text-align:center;">✓</td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th><input type="checkbox"></th>
+                    <th>名字</th>
+                    <th>姓氏</th>
+                    <th>信箱</th>
+                    <th style="text-align:center; min-width:100px;">超棒Guider</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>－－</td>
+                    <td>陳</td>
+                    <td>ag874993@gmail.com</td>
+                    <td style="text-align:center;"></td>
+                  </tr>
+                  <tr class="table-row-c">
+                    <td><input type="checkbox"></td>
+                    <td>Amy</td>
+                    <td>Chen</td>
+                    <td>damychen988@gmail.com</td>
+                    <td style="text-align:center;"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>James</td>
+                    <td>Aksjdnddfjn</td>
+                    <td>csbhbh5968@gmail.com</td>
+                    <td style="text-align:center;">✓</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
             <div class="col-12 pagination-right">

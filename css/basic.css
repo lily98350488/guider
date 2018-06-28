@@ -46,7 +46,7 @@ h6 {
   font-size: 1.05rem;
   line-height: 1.5; }
 
-.object-center, .custom-file .rounded img, .custom-file .rounded p {
+.object-center, .custom-file .rounded img, .custom-file .guider-photo-upload img, .custom-file .add-photo img, .custom-file .rounded p, .custom-file .guider-photo-upload p, .custom-file .add-photo p {
   position: absolute;
   margin: auto;
   left: 0;
@@ -225,7 +225,7 @@ button:active,
   .maxwidth {
     max-width: 900px;
     margin: auto; } }
-.border-dashed, .custom-file .rounded {
+.border-dashed, .custom-file .rounded, .custom-file .guider-photo-upload, .custom-file .add-photo {
   border: 2px dashed #cccccc; }
 
 .not-active {
@@ -285,15 +285,24 @@ input[type=number]::-webkit-outer-spin-button {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat; }
-.custom-file .rounded {
+.custom-file .rounded, .custom-file .guider-photo-upload, .custom-file .add-photo {
   height: 0;
   padding-bottom: 56.25%;
   position: relative; }
-  .custom-file .rounded img {
+  .custom-file .rounded img, .custom-file .guider-photo-upload img, .custom-file .add-photo img {
     max-height: 100%;
     max-width: 100%; }
-  .custom-file .rounded p {
+  .custom-file .rounded p, .custom-file .guider-photo-upload p, .custom-file .add-photo p {
     height: max-content; }
+.custom-file .guider-photo-upload {
+  width: 100%;
+  overflow: hidden;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat; }
+.custom-file .add-photo {
+  cursor: pointer;
+  overflow: hidden; }
 
 input[type=text].only-line {
   border: 0;
@@ -376,6 +385,12 @@ input[type="checkbox"] {
   max-height: 2rem; }
   .sm-select::-ms-expand {
     display: none; }
+
+span.rainbow {
+  padding-left: 35px;
+  background-image: url(/guider-project/img/rainbow.png);
+  background-repeat: no-repeat;
+  background-size: contain; }
 
 .sm-2-pr, .md-2-pr {
   margin-right: -10px;
@@ -524,6 +539,8 @@ body {
 #Header {
   -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); }
+  #Header .navbar-light {
+    background-color: #fff !important; }
 
 #Subheader .container {
   height: 20vh;
@@ -672,6 +689,18 @@ body {
   background: rgba(103, 149, 234, 0.8);
   color: #fff;
   margin-bottom: 5px; }
+
+.star-rate .star-yellow, .star-rate .star-half, .star-rate .star-grey {
+  margin: 3px;
+  padding: 5px 15px;
+  background: rgba(255, 255, 255, 0) url("/guider-project/img/star-y.svg") no-repeat center center; }
+.star-rate .star-half {
+  background: rgba(255, 255, 255, 0) url("/guider-project/img/star-h.svg") no-repeat center center; }
+.star-rate .star-grey {
+  background: rgba(255, 255, 255, 0) url("/guider-project/img/star-g.svg") no-repeat center center; }
+
+.star-rate.small i {
+  padding: 2px 10px; }
 
 .star-rate .fa-star {
   color: #cccccc; }
@@ -932,8 +961,8 @@ body {
   position: relative; }
   .full-side-bar.stay-ontop #sticky-side-bar {
     position: sticky;
-    top: 0;
-    margin-top: -48px; }
+    top: 77px;
+    margin-top: -54px; }
     .full-side-bar.stay-ontop #sticky-side-bar .open-icon, .full-side-bar.stay-ontop #sticky-side-bar .close-icon {
       width: 45px;
       height: 100%;

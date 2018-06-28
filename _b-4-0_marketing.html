@@ -13,7 +13,7 @@
     <div class="container-fluid d-md-flex-nowrap">
       <div class="row">
         <nav class="navbar navbar-expand-md col-12 col-md-2 col-lg-2 navbar-light flex-md-column">
-        <a class="navbar-brand" href="#">Guider平台<span>管理後端</span></a>
+        <a class="navbar-brand" href="#">Guider後台</a>
         <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,6 +21,9 @@
           <ul class="navbar-nav flex-md-column">
             <li class="nav-item">
               <a class="nav-link" href="#">帳號</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">檢舉Guider</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">預約記錄</a>
@@ -34,10 +37,10 @@
               </div>
             </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">行銷功能</a>
+        <a class="nav-link active" href="#">行銷功能</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="#">設定</a>
+        <a class="nav-link" href="#">設定</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">登出</a>
@@ -61,18 +64,22 @@
             </div>
             <div class="content_t col-12 mb-3">
               <table align="center">
-                <tr>
-                  <th style="width:20%; min-width:100px">折扣種類</th>
-                  <th style="width:20%; min-width:130px">優惠金額％數</th>
-                  <th style="width:40%; min-width:200px">使用期限</th>
-                  <th style="width:5%; min-width:50px;">編輯</th>
-                </tr>
-                <tr>
-                  <td>費用折扣</td>
-                  <td>$10.00USD</td>
-                  <td>2018/02/17-2018/03/14</td>
-                  <td><a href="#">編輯</a></td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th style="min-width:155px">折扣種類</th>
+                    <th style="min-width:130px">優惠金額％數</th>
+                    <th style="min-width:500px">使用期限</th>
+                    <th style="min-width:50px;">編輯</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>費用折扣</td>
+                    <td>$10.00USD</td>
+                    <td>2018/02/17-2018/03/14</td>
+                    <td><a href="#">編輯</a></td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
@@ -81,36 +88,40 @@
             <button class="btn" type="button">新增優惠券</button>
             <div class="content_t col-12 mb-2">
               <table align="center">
-                <tr>
-                  <th style="width:15%; min-width:120px">優惠活動名稱</th>
-                  <th style="width:11%; min-width:80px">折扣種類</th>
-                  <th style="width:15%; min-width:120px">優惠金額％數</th>
-                  <th style="width:11%; min-width:80px">發行張數</th>
-                  <th style="width:13%; min-width:90px">已使用張數</th>
-                  <th style="width:15%; min-width:120px">使用期限</th>
-                  <th style="width:5%; min-width:50px;">編輯</th>
-                  <th style="width:5%; min-width:50px;">刪除</th>
-                </tr>
-                <tr>
-                  <td>Guider599</td>
-                  <td>費用折扣</td>
-                  <td>$10.00USD</td>
-                  <td>50</td>
-                  <td>12</td>
-                  <td>2018/02/17-2018/03/14</td>
-                  <td><a href="#">編輯</a></td>
-                  <td><a href="#">刪除</a></td>
-                </tr>
-                <tr>
-                  <td>Guider154787</td>
-                  <td>%數折扣</td>
-                  <td>15%</td>
-                  <td>100</td>
-                  <td>0</td>
-                  <td>2018/02/17-2018/03/14</td>
-                  <td><a href="#">編輯</a></td>
-                  <td><a href="#">刪除</a></td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th style="min-width:120px">優惠活動名稱</th>
+                    <th style="min-width:80px">折扣種類</th>
+                    <th style="min-width:120px">優惠金額％數</th>
+                    <th style="min-width:80px">發行張數</th>
+                    <th style="min-width:90px">已使用張數</th>
+                    <th style="min-width:120px">使用期限</th>
+                    <th style="min-width:50px;">編輯</th>
+                    <th style="min-width:50px;">刪除</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Guider599</td>
+                    <td>費用折扣</td>
+                    <td>$10.00USD</td>
+                    <td>50</td>
+                    <td>12</td>
+                    <td>2018/02/17-2018/03/14</td>
+                    <td><a href="#">編輯</a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr class="table-row-c">
+                    <td>Guider154787</td>
+                    <td>%數折扣</td>
+                    <td>15%</td>
+                    <td>100</td>
+                    <td>0</td>
+                    <td>2018/02/17-2018/03/14</td>
+                    <td><a href="#">編輯</a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>

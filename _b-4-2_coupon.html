@@ -9,22 +9,11 @@
   @import url(css/backend.css);
   </style>
 </head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-  <title>Document</title>
-  <style type="text/css">
-  @import url(css/all.css);
-  </style>
-</head>
 <body>
   <div class="box container-fluid d-md-flex-nowrap">
     <div class="row">
       <nav class="navbar navbar-expand-md col-12 col-md-2 col-lg-2 navbar-light flex-md-column">
-        <a class="navbar-brand" href="#">Guider平台<span>管理後端</span></a>
+        <a class="navbar-brand" href="#">Guider後台</a>
         <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,6 +21,9 @@
           <ul class="navbar-nav flex-md-column">
             <li class="nav-item">
               <a class="nav-link" href="#">帳號</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">檢舉Guider</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">預約記錄</a>
@@ -73,7 +65,7 @@
               <div class="item col-12 p-2">
                 <h3>折扣種類</h3>
                 <div class="classification form-group">
-                  <select class="input-area custom-select custom-select-default" id="classification">
+                  <select class="input-area custom-select custom-select-default" id="discount">
                     <option>請選擇折扣種類</option>
                     <option>費用折扣</option>
                     <option>%數折扣</option>
@@ -100,8 +92,8 @@
       <div class="card button-card">
         <h2 class="card-header">動作</h2>
         <div class="b-card-body">
-          <button class="btn card-btn" type="button">停用</button>
-          <button class="btn card-btn" type="button">儲存</button>
+          <button class="btn btn-100 mb-2" type="button">停用</button>
+          <button class="btn btn-100 mb-2" type="button">儲存</button>
         </div>
       </div>
     </div>

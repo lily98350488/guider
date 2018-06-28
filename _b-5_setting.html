@@ -13,7 +13,7 @@
 	  <div class="container-fluid d-md-flex-nowrap">
       <div class="row">
         <nav class="navbar navbar-expand-md col-12 col-md-2 col-lg-2 navbar-light flex-md-column">
-        <a class="navbar-brand" href="#">Guider平台<span>管理後端</span></a>
+        <a class="navbar-brand" href="#">Guider後台</a>
         <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,6 +21,9 @@
           <ul class="navbar-nav flex-md-column">
             <li class="nav-item">
               <a class="nav-link" href="#">帳號</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">檢舉Guider</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">預約記錄</a>
@@ -50,7 +53,7 @@
           <div class="col-12">
             <h1>首頁輪播背景</h1><hr>
             <div class="col-12 pl-2 pr-2">
-              <p class="mb-2">體作型無只素紀時我望字爸著賣親沒類……他背去史不過子去他。了性童戰後……他好臺人，然資能人以！作地可，公星起連意良，價事以，支負說其境事好。的為自洋供起影回！活早作少當員星臺！媽能市應什氣說事，見手辦她聲我那有心客會每樣業的思市的行企對北力星來歷小帶的能入華子母，了即麼技孩的如！</p>
+              <p class="mb-2">圖片建議尺寸：寬度1920px，高度1080px，解析度72。請先將圖片壓縮後再上傳！</br>壓縮圖片工具：搜尋tinyjpg</p>
                 <div class="custom-file col-12 mb-3">
                   <div class="input-image col-12">
                     <div>+<br>首頁輪播背景</div>
@@ -61,14 +64,15 @@
                   <div class="input-image">
                     <div>+<br>首頁輪播背景</div>
                   </div>
-                  <input type="file" class="custom-file-input" id="inputGroupFile01">
+                  <input type="file" class="custom-file-input" id="inputGroupFile02">
                 </div>
                 <div class="custom-file col-12 mb-3">
                   <div class="input-image">
                     <div>+<br>首頁輪播背景</div>
                   </div>
-                  <input type="file" class="custom-file-input" id="inputGroupFile01">
+                  <input type="file" class="custom-file-input" id="inputGroupFile03">
                 </div>
+                <button class="btn btn-100 mb-5" type="button">儲存</button>
             </div>
           </div>
         </div>
@@ -77,7 +81,26 @@
     </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    $(function() {
+        // 個人相片更換
+
+        $(".custom-file input").on("change", function(event) {
+            var $this = $(this).siblings(".input-image");
+            var files = event.target.files;
+            var image = files[0];
+            // here's the file size
+            var reader = new FileReader();
+            reader.onload = function(file) {
+                var img = new Image();
+                img.src = file.target.result;
+                $this.html(img);
+            };
+            reader.readAsDataURL(image);
+        });
+    });
+    </script>
 </body>
 </html>
 

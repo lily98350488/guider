@@ -367,7 +367,21 @@ input[type=number]::-webkit-outer-spin-button {
       height: max-content;
     }
   }
+  .guider-photo-upload{
+    @extend .rounded;
+    width: 100%;
+    overflow: hidden;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .add-photo{
+    @extend .rounded;
+    cursor: pointer;
+    overflow: hidden;
+  }
 }
+
 //INPUT TEXT{
 input[type=text].only-line{
   border:0;
@@ -457,6 +471,13 @@ input[type="checkbox"] {
     display: none;
 }
 }
+// RAINBOW
+span.rainbow{
+    padding-left: 35px;
+    background-image: url(/guider-project/img/rainbow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 // PADDING
 .sm-2-pr, .md-2-pr {
     margin-right: -10px;
@@ -640,6 +661,9 @@ body {
 #Header{
   -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,.1);
   box-shadow: 0px 3px 5px rgba(0,0,0,.1);
+  .navbar-light{
+    background-color:$white!important;
+  }
 }
 #Subheader {
   @extend .grad-desk;
@@ -841,6 +865,24 @@ body {
   margin-bottom: 5px;
 }
 // REVIEW
+.star-rate{
+  .star-yellow{
+      margin: 3px;
+      padding:5px 15px;
+      background: rgba(255,255,255,0) url("/guider-project/img/star-y.svg") no-repeat center center;
+    }
+  .star-half{
+    @extend .star-yellow;
+     background: rgba(255,255,255,0) url("/guider-project/img/star-h.svg") no-repeat center center;
+  }
+  .star-grey{
+    @extend .star-yellow;
+     background: rgba(255,255,255,0) url("/guider-project/img/star-g.svg") no-repeat center center;
+  }
+}
+.star-rate.small i{
+  padding:2px 10px;
+}
 .star-rate .fa-star {
   color: $gray-300;
 }
@@ -1181,8 +1223,8 @@ body {
   position:relative;
   #sticky-side-bar{
     position:sticky;
-    top: 0;
-    margin-top: -48px;
+    top: 77px;
+    margin-top: -54px;
     .open-icon, .close-icon{
     width: 45px;
     height: 100%;

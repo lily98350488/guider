@@ -267,7 +267,8 @@
                                             </div>
                                             <div class="form-group set-choose col-12 col-sm-3 sm-4-pr">
                                                 <input class="show-more" type="checkbox" id="rainbow" value="彩虹">
-                                                <label class="btn btn-outline-primary" for="rainbow">彩虹</label>
+                                                <label class="btn btn-outline-primary" for="rainbow">
+                                                    <span class="rainbow"></span></label>
                                             </div>
                                             <div class="col-12 show-more-des" style="display:none;">
                                                 <p>Guider致力於建立一個沒有不同的世界，並期待於不久的將來我們能夠一起達成這個目標。</p>
@@ -639,6 +640,32 @@
                                             <div class="col-12">
                                                 <p>上傳限制說明，最多可以上傳15張。</p>
                                             </div>
+                                            <div class="col-12 img-box">
+                                                <div class="custom-file upload-photo ">
+                                                    <div class="guider-photo-upload">
+                                                        <p class="text-center">+
+                                                            <br>主照片</p>
+                                                    </div>
+                                                    <input type="file" accept="image/*" class="custom-file-input" id="Photo01" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-3 md-4-pr img-box">
+                                                <div class="custom-file upload-photo ">
+                                                    <div class="delete-photo"><i class="fas fa-times-circle"></i></div>
+                                                    <div class="guider-photo-upload">
+                                                        <p class="text-center">+
+                                                            <br>上傳照片</p>
+                                                    </div>
+                                                    <input type="file" accept="image/*" class="custom-file-input" id="Photo02" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-3 md-4-pr add-img">
+                                                <div class="custom-file">
+                                                    <div class="add-photo">
+                                                        <p class="text-center">+</p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -673,7 +700,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="changeProfileImg" tabindex="-1" role="dialog" aria-labelledby="changeProfileImg" aria-hidden="true">
+    <div class="modal fade" id="changeProfileImg" tabindex="-1" role="dialog" aria-labelledby="forgetPassword" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -724,6 +751,78 @@
             };
             reader.readAsDataURL(image);
         });
+
+        // 上傳相片
+        jQuery.upload = function(a) {
+            $(a).on("change", function(event) {
+                var $this = $(this).siblings(".guider-photo-upload");
+                var files = event.target.files;
+                var image = files[0];
+                // here's the file size
+                var reader = new FileReader();
+                reader.onload = function(file) {
+                    var img = new Image();
+                    img.src = file.target.result;
+                    $this.html(img);
+                };
+                reader.readAsDataURL(image);
+            });
+        };
+
+        var $photo = $(".set-input .md-4-pr.img-box");
+        var photo_num = $photo.length;
+        var $add = $(".set-input .md-4-pr.add-img");
+        if (photo_num > 13) {
+            $add.hide();
+        } else {
+            $add.show();
+        }
+
+        $add.on("click", function() {
+            var $photo = $(".set-input .md-4-pr.img-box");
+            var photo_num = $photo.length;
+
+            var $clone = $photo.first().clone();
+            $clone.find("input").attr("id", "photo0" + (photo_num + 1));
+            $clone
+                .find(".guider-photo-upload")
+                .html('<p class="text-center">+<br>上傳照片</p>');
+            console.log(photo_num);
+            $add.last().before($clone);
+            if (photo_num > 13) {
+                $add.hide();
+            } else {
+                $add.show();
+            }
+            $.upload($(".upload-photo input"));
+            $(".custom-file .delete-photo").on("click", function() {
+                $(this)
+                    .closest(".img-box")
+                    .remove();
+                var $photo = $(".set-input .md-4-pr.img-box");
+                var photo_num = $photo.length;
+                if (photo_num <= 14) {
+                    $add.show();
+                } else {
+                    $add.hide();
+                }
+            });
+        });
+        $.upload($(".upload-photo input"));
+        $(".custom-file .delete-photo").on("click", function() {
+            $(this)
+                .closest(".img-box")
+                .remove();
+
+            var $photo = $(".set-input .md-4-pr.img-box");
+            var photo_num = $photo.length;
+            console.log(photo_num);
+            if (photo_num <= 14) {
+                $add.show();
+            } else {
+                $add.hide();
+            }
+        });
         // 編輯&儲存按鈕
         function settingChange() {
             $(".set-btn button[type='button']").on("click", function() {
@@ -760,7 +859,7 @@
                     event.preventDefault();
                 }
             });
-            $(".set-input button[type='submit']").on("click", function() {
+            $(".show-more-des button[type='submit']").on("click", function() {
                 var $this = $(this),
                     set_output = $this.closest(".set-input").siblings(".set-output"),
                     set_input = $this.closest(".set-input"),
@@ -787,7 +886,7 @@
             });
         }
         settingChange();
-        // 語言標籤
+
         $("#selectLang").change(function(e) {
             e.preventDefault();
             var $this = $(this),
@@ -805,6 +904,7 @@
                     str +
                     "</div>"
                 );
+            // 語言標籤
             $(".lang-result").click(function() {
                 var $this = $(this),
                     attr = $(this).attr("attr-index"),
@@ -813,7 +913,10 @@
                 console.log(index);
                 $("#selectLang option:eq(" + index + ")").removeAttr("disabled");
                 if ($this.parent().length == 0) {
-                    $("#selectLang option[value='選擇你會的語言！']").prop("selected", true);
+                    $("#selectLang option[value='選擇你會的語言！']").prop(
+                        "selected",
+                        true
+                    );
                 }
             });
         });
@@ -859,16 +962,14 @@
                     var value = parseInt($input.val()) - 1;
                     $input.val(value);
                     $add.removeClass("num-limit");
-                    
-                    if (value == minQty) {
+
+                    if (value == 1) {
                         $minus.addClass("num-limit");
                     }
                 }
             });
         }
         addMinusQty();
-       
-       
     });
     </script>
 </body>
