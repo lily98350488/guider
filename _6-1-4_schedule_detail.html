@@ -570,8 +570,29 @@
                                     <div class="col-12 form-group">
                                         <input class="form-control only-line" type="text" placeholder="地址">
                                     </div>
-                                    <div class="col-12 mb-1">
+                                    <div class="col-12 mb-3">
                                         <textarea class="form-control" rows="3" placeholder="請輸入建議穿著、必須攜帶的物品"></textarea>
+                                    </div>
+                                    <div class="col-12 mb-1">
+                                        <div class="row view-add">
+                                            <div class="col-4 md-4-pr img-box">
+                                                <div class="custom-file upload-photo ">
+                                                    <div class="delete-photo"><i class="fas fa-times-circle"></i></div>
+                                                    <div class="guider-photo-upload">
+                                                        <p class="text-center">+
+                                                            <br>上傳照片</p>
+                                                    </div>
+                                                    <input type="file" accept="image/*" class="custom-file-input" id="Photo02" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-4  md-4-pr add-img">
+                                                <div class="custom-file">
+                                                    <div class="add-photo">
+                                                        <p class="text-center">+</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row pt-3">
@@ -652,8 +673,29 @@
                                     <div class="col-12 form-group">
                                         <input class="form-control only-line" type="text" placeholder="地址">
                                     </div>
-                                    <div class="col-12 mb-1">
+                                    <div class="col-12 mb-3">
                                         <textarea class="form-control" rows="3" placeholder="請輸入美食簡介"></textarea>
+                                    </div>
+                                    <div class="col-12 mb-1">
+                                        <div class="row food-add">
+                                            <div class="col-4 md-4-pr img-box">
+                                                <div class="custom-file upload-photo ">
+                                                    <div class="delete-photo"><i class="fas fa-times-circle"></i></div>
+                                                    <div class="guider-photo-upload">
+                                                        <p class="text-center">+
+                                                            <br>上傳照片</p>
+                                                    </div>
+                                                    <input type="file" accept="image/*" class="custom-file-input" id="Photo02" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-4  md-4-pr add-img">
+                                                <div class="custom-file">
+                                                    <div class="add-photo">
+                                                        <p class="text-center">+</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row pt-3 pb-3">
@@ -1103,7 +1145,7 @@
     <script>
     $(function() {
         //   LIST TABLE
-        $('body').scrollspy({ target: '#list-table' });
+        $("body").scrollspy({ target: "#list-table" });
         //   SCHED DATE
         var $carousel = $(".sched-carousel"),
             $li = $(".sched-carousel .sched-date"),
@@ -1120,24 +1162,28 @@
         }
 
         function reSet() {
-
             $right.show();
             $left.show();
-            $li.first().addClass("now").siblings().removeClass('now');
+            $li
+                .first()
+                .addClass("now")
+                .siblings()
+                .removeClass("now");
             if (length <= num) {
                 $right.hide();
                 $left.hide();
             }
-        };
+        }
 
         function boxShow() {
             var $box = $(".date-picked"),
                 $now = $(".sched-carousel .sched-date.now"),
                 index = $now.index();
             $box.eq(index).fadeIn(500);
-            $box.eq(index).siblings().fadeOut(0);
-
-
+            $box
+                .eq(index)
+                .siblings()
+                .fadeOut(0);
         }
 
         function reSize() {
@@ -1169,7 +1215,9 @@
 
                 var l = parseFloat($li.eq(-length % num).css("left")),
                     ml = Math.round(l / w);
-                if (ml == num) { $right.hide(); }
+                if (ml == num) {
+                    $right.hide();
+                }
                 boxShow();
             });
             $left.on("click", function() {
@@ -1220,10 +1268,11 @@
             schedDateSelector();
         });
 
-
         //   SHOW SCHED
         function classDelayed(jqObj, c, d, to) {
-            setTimeout(function() { jqObj.addClass(c).removeClass(d); }, to);
+            setTimeout(function() {
+                jqObj.addClass(c).removeClass(d);
+            }, to);
         }
 
         $(".date-picked .open-sched").click(function() {
@@ -1232,15 +1281,26 @@
             $parent.find(".show-sched").slideDown();
             $parent.find(".hide-sched").hide();
             $parent.find(".col .text-center").removeClass("align-self-center");
-            $this.hide().siblings(".close-sched").show();
+            $this
+                .hide()
+                .siblings(".close-sched")
+                .show();
         });
         $(".date-picked .close-sched").click(function() {
             var $this = $(this),
                 $parent = $this.closest(".bg-white.shadow");
             $parent.find(".show-sched").slideUp(500);
             $parent.find(".hide-sched").show(500);
-            classDelayed($parent.find(".col .text-center"), "align-self-center", "", 500);
-            $this.hide().siblings(".open-sched").show();
+            classDelayed(
+                $parent.find(".col .text-center"),
+                "align-self-center",
+                "",
+                500
+            );
+            $this
+                .hide()
+                .siblings(".open-sched")
+                .show();
         });
 
         // SHOW MORE
@@ -1263,15 +1323,86 @@
 
         function changeCate() {
             $("input.choose-cate").click(function() {
-
                 var $this = $(this),
                     i = $this.parent(".set-choose").index(),
                     show_cate = $(".show-cate .cate").eq(i - 1);
-                console.log(show_cate.html());
-                show_cate.slideDown().siblings().slideUp();
+                // console.log(show_cate.html());
+                show_cate
+                    .slideDown()
+                    .siblings()
+                    .slideUp();
+            });
+        }
+        changeCate();
+        jQuery.upload = function(a) {
+            $(a).on("change", function(event) {
+                var $this = $(this).siblings(".guider-photo-upload");
+                var files = event.target.files;
+                var image = files[0];
+                // here's the file size
+                var reader = new FileReader();
+                reader.onload = function(file) {
+                    var img = new Image();
+                    img.src = file.target.result;
+                    $this.html(img);
+                };
+                reader.readAsDataURL(image);
             });
         };
-        changeCate();
+        jQuery.deleteimg = function(c) {
+            $(c).find(".custom-file .delete-photo").on("click", function() {
+                var $add = $(c).find(".add-img");
+                $(this)
+                    .closest(".img-box")
+                    .remove();
+                var $photo = $(c).find(".img-box");
+                var photo_num = $photo.length;
+                console.log(photo_num);
+                if (photo_num <= 3) {
+                    $add.show();
+                } else {
+                    $add.hide();
+                }
+            });
+        };
+        jQuery.addimg = function(b) {
+            var $photo = $(b).find(".img-box");
+            var photo_num = $photo.length;
+            console.log(photo_num);
+            var $add = $(b).find(".add-img");
+            if (photo_num > 2) {
+                $add.hide();
+            } else {
+                $add.show();
+            }
+            $add.on("click", function() {
+                var $photo = $(b).find(".img-box");
+                var photo_num = $photo.length;
+
+                var $clone = $photo.first().clone();
+                $clone.find("input").attr("id", "photo0" + (photo_num + 1));
+                $clone
+                    .find(".guider-photo-upload")
+                    .html('<p class="text-center">+<br>上傳照片</p>');
+
+                $add.last().before($clone);
+                var photo_num = $(b).find(".col-4").length;
+                console.log(photo_num);
+                if (photo_num == 5) {
+                    $add.hide();
+                } else {
+                    $add.show();
+                }
+                $.upload($(".upload-photo input"));
+                $.deleteimg(b);
+            });
+            $.upload($(".upload-photo input"));
+            $.deleteimg(b);
+
+        };
+        $.addimg($(".view-add"));
+        $.addimg($(".food-add"));
+
     });
     </script>
 </body>

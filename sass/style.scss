@@ -244,6 +244,9 @@
 }
 
 // 6-1-4
+.cate .row .img-box:first-of-type{
+  display:none;
+}
 .sched-carousel{
     width:100%;
     display:block;

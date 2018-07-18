@@ -1299,6 +1299,9 @@ body {
 @media (max-width: 575.98px) {
   .d-flex.flex-wrap.flex-sm-nowrap .mr-auto {
     width: 100%; } }
+.cate .row .img-box:first-of-type, .cate .row .add-img:first-of-type {
+  display: none; }
+
 .sched-carousel {
   width: 100%;
   display: block;
